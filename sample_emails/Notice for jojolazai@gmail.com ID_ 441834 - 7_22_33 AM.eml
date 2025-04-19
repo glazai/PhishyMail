@@ -1,0 +1,219 @@
+Delivered-To: jojolazai@gmail.com
+Received: by 2002:a05:6a10:d18e:b0:5f0:9c78:4f9d with SMTP id l14csp2403475pxv;
+        Tue, 25 Mar 2025 00:22:37 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IE+1dBuzWeLDrWzqti2KdLW7zHzShRdEfXeHjw4A4GmBFQcJLXZWMDK8PyqMu2tF+Q6EZEr
+X-Received: by 2002:a05:6902:478b:b0:e63:66be:3143 with SMTP id 3f1490d57ef6-e66a4d7b2b6mr19803085276.17.1742887357281;
+        Tue, 25 Mar 2025 00:22:37 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1742887357; cv=pass;
+        d=google.com; s=arc-20240605;
+        b=dFefeOGKJdVz89y+FmmcNzN8wPzhVBc8cCLijMrFWHLf+xnJnw0wvrlX9sgbPMaRwW
+         gXiUGuH1aSdiRXMbRCDst/JpoEadBz5xODg4Ygnq1BJIrRbHd+cvf+vvrFD9jmBaUB48
+         vGjNWUBPpBLJI6d0adGmJtZKt70JRZqII99JbvkBr06Z0TazaghGWBszQ9Z2gWQ0lOSz
+         K3yuOLRrrIZ+pClXZ/P9BumLHcpfJMqjYbiDLNfJdOA+4/bVN/Edd8RKwdY+Ollzel1X
+         BySaXoGVA63R9blGXnIoMqQSF1ZtjbOHRgayc/JsvSEEL4eW4Hyy6F1tAeWyGXrJLrN/
+         k2tg==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:message-id:date:content-transfer-encoding:to:subject
+         :from:dkim-signature;
+        bh=s3YPE5dfll/szXWfV6QsX010j8RbwBfN6FBMb5uD3Po=;
+        fh=Pb4gipzSqFnZ16CnvZ6qY1tvVnuU7TyXkPbiOgUOseI=;
+        b=NDhoGnqlEulDcrG9lxFNYzLSF4ZLILfChWrWwVB8eOXaJAEND7Y+MmR2J1+KnadI8x
+         7OLB7osWXCheeSR7qWqkesl1zDSpWESQQeqIs1FFUYT2jNbfwaUDQaVVeqYoBXHw8vWa
+         KBwqvwSXhLOCkwThIcXw1iMGJS+LB8iWqKm1gfES3KgrZ4Xm/wcZAit8TuVzTy1LVANQ
+         6RzYtYJyDNOsENy7yIz6HS4gCfVCmByt3xYHHE3GrmC744nTk4G3TQe5FRI2U/jmGFZP
+         3sT7aRCBQegZYoVLa4GsmaeSyaIsqUM1kFrNqQiZy1eOSPF0CMeKpGEQe7uAQMrTCvSn
+         masw==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@fartbuedu.onmicrosoft.com header.s=selector2-fartbuedu-onmicrosoft-com header.b=BwFC1qCW;
+       arc=pass (i=1 spf=pass spfdomain=fart.bu.edu.eg dkim=pass dkdomain=fart.bu.edu.eg dmarc=pass fromdomain=fart.bu.edu.eg);
+       spf=pass (google.com: domain of ahmed181319@fart.bu.edu.eg designates 2a01:111:f403:c201::3 as permitted sender) smtp.mailfrom=ahmed181319@fart.bu.edu.eg;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=bu.edu.eg
+Return-Path: <ahmed181319@fart.bu.edu.eg>
+Received: from AS8PR04CU009.outbound.protection.outlook.com (mail-westeuropeazlp170110003.outbound.protection.outlook.com. [2a01:111:f403:c201::3])
+        by mx.google.com with ESMTPS id 3f1490d57ef6-e66a44b39f4si7604232276.322.2025.03.25.00.22.37
+        for <jojolazai@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Tue, 25 Mar 2025 00:22:37 -0700 (PDT)
+Received-SPF: pass (google.com: domain of ahmed181319@fart.bu.edu.eg designates 2a01:111:f403:c201::3 as permitted sender) client-ip=2a01:111:f403:c201::3;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@fartbuedu.onmicrosoft.com header.s=selector2-fartbuedu-onmicrosoft-com header.b=BwFC1qCW;
+       arc=pass (i=1 spf=pass spfdomain=fart.bu.edu.eg dkim=pass dkdomain=fart.bu.edu.eg dmarc=pass fromdomain=fart.bu.edu.eg);
+       spf=pass (google.com: domain of ahmed181319@fart.bu.edu.eg designates 2a01:111:f403:c201::3 as permitted sender) smtp.mailfrom=ahmed181319@fart.bu.edu.eg;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=bu.edu.eg
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=none;
+ b=Lj+KsuHNUEWCTXijTK3xWG79erIGcKoDVAUnfTwrwBhS3fPFY097dOxG8fDGAg/rRwEFpApLIe2OtaWPv2aQwZwYKCKqpa7gWfH1CU8vaH+laIC33zOI2Ag/8gRfpKluiPDbNRTvESHwZP2DSuEnPPYHucvDf4FmODzllRDSo4ds6CQWTR4WXPQWWiI74669zr3nUYkj/kVgoB3vGNAjSZHvIKAVQHULYr5Rk9DGYj8I5CIhFywsF7fGFtV4ink8uXck72YGvnqIvGnBwB/K95VvjbUQ9otL5qKR34AavYQ3u4wQFuq6r4XWJY99I4/g3HTMk04Iv1IylSKkVv8Qmw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=s3YPE5dfll/szXWfV6QsX010j8RbwBfN6FBMb5uD3Po=;
+ b=M6XT31bO7ozN7RjS90qVgv2GDQBVFx7IP3Fta3jUS9Oob6oq5V/Q6TvLw7s69xBG5cx5eHYnn1rfwzHkVFUbD2sdE5FDjV/esqSEwtyoJ12Uc4xH2n2ZpH14+yxgO8z9ahJFChxC0tYFAhS/f963tJwfhp1K2P+/AoizX6W3ZZENEBZCmG1J4UFFXs3b7pYzOiY2EFi82r36OUBUPimgHuAH/m+GCivm2Xxg4pN2T8HWGCpclpEAUCs9h2yp9GESNAK9q5duAo85PjPkISLPD0eIV1hV81+shefv+09iqS6/UmIY8m8IO2lDlijL4iHzulJurtiSZnHDstBpluonjw==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+ smtp.mailfrom=fart.bu.edu.eg; dmarc=pass action=none
+ header.from=fart.bu.edu.eg; dkim=pass header.d=fart.bu.edu.eg; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=fartbuedu.onmicrosoft.com; s=selector2-fartbuedu-onmicrosoft-com;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=s3YPE5dfll/szXWfV6QsX010j8RbwBfN6FBMb5uD3Po=;
+ b=BwFC1qCW2eVNtke+UREeAWMAXXM0nKVU67EWMTbOqIGJGxOX+Ku50TDPXuBPscDIDUP8uP0PgA8anUgDCCWIVcawIGlpeTGWw4oIdtDlbLPouPkGKp0E9wKqwa08Kk/upkXLbeO90PKDKUoBoU4DuZpKARra1izi3Ro7cD8GwI8=
+Authentication-Results: dkim=none (message not signed)
+ header.d=none;dmarc=none action=none header.from=fart.bu.edu.eg;
+Received: from DB9PR01MB9104.eurprd01.prod.exchangelabs.com
+ (2603:10a6:10:367::12) by PR3PR01MB6650.eurprd01.prod.exchangelabs.com
+ (2603:10a6:102:60::20) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.8534.42; Tue, 25 Mar
+ 2025 07:22:35 +0000
+Received: from DB9PR01MB9104.eurprd01.prod.exchangelabs.com
+ ([fe80::16a5:6497:85b3:843e]) by DB9PR01MB9104.eurprd01.prod.exchangelabs.com
+ ([fe80::16a5:6497:85b3:843e%7]) with mapi id 15.20.8534.040; Tue, 25 Mar 2025
+ 07:22:35 +0000
+From: "TV*Licensing" <ahmed181319@fart.bu.edu.eg>
+Subject: Notice for jojolazai@gmail.com ID: 441834 - 7:22:33 AM
+To: "jojolazai" <jojolazai@gmail.com>
+Content-Type: text/plain; charset=euc-jp
+Content-Transfer-Encoding: quoted-printable
+Date: Tue, 25 Mar 2025 07:22:35 +0000
+X-ClientProxiedBy: AS4PR10CA0015.EURPRD10.PROD.OUTLOOK.COM
+ (2603:10a6:20b:5dc::11) To DB9PR01MB9104.eurprd01.prod.exchangelabs.com
+ (2603:10a6:10:367::12)
+Return-Path: ahmed181319@fart.bu.edu.eg
+Message-ID:
+ <DB9PR01MB91046EB72A4740B8A85C10C6D2A72@DB9PR01MB9104.eurprd01.prod.exchangelabs.com>
+MIME-Version: 1.0
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: DB9PR01MB9104:EE_|PR3PR01MB6650:EE_
+X-MS-Office365-Filtering-Correlation-Id: 6ae3ea11-4f44-46d6-2670-08dd6b6dd0c7
+X-MS-Exchange-SenderADCheck: 1
+X-MS-Exchange-AntiSpam-Relay: 0
+X-Microsoft-Antispam:
+	BCL:0;ARA:13230040|376014|52116014|1800799024|366016|41320700013|38350700014|7053199007;
+X-Microsoft-Antispam-Message-Info:
+	=?euc-jp?B?N1lEeDFUVlZyd2tmL3RaYkVnbUdISXgzTkRLd003ejNYZEQ0bG8wNGxibFhi?=
+ =?euc-jp?B?WWJ3Sk5FSzA1aVJoRk83THlyanliSEJnUFhBZVEwNWpJV01OTng4dGRidTly?=
+ =?euc-jp?B?Q1BvMFBxN1JxYnEyTlJNVnNTL2txYXdDNHlJOTEzaFEyOC9md3lXL3dpZ3Ux?=
+ =?euc-jp?B?MVA0L2tLVzhXQW9PNGpWR0JSL0xydjd1ZVlIcll2aTlOTWNraXhNTldEVVZj?=
+ =?euc-jp?B?OHNFQnk5U2pEekx5d09Va094czZWMFNBSDhHREdrQXNOejNtNjdKcnAwVlYw?=
+ =?euc-jp?B?QUx4a1RRSjdDOGp6QzJmbGJMNVBWYnEzRWhjREhFWnN2R3lxaFplUGsxWDMw?=
+ =?euc-jp?B?S1dlVmQxVlJSTjBubUF0aGVtN2F3MmlVL0gxK0J4c05maHkzQ0tTNTJWdGti?=
+ =?euc-jp?B?QzEzU3ljM3g5ZVV4QUhJY3dmRUcvWkFEUlZDMmxzWE9sMHVBV1loTFZUamhP?=
+ =?euc-jp?B?d0ZRcFVSNXdRTmt4aVgzWFpjcWU0cDI3RjJISXRTNGZjcktLWTIrZUllK3F4?=
+ =?euc-jp?B?Wm1NM1VTS1c1blFSMmZ6aThjQzV3SG9NRHBRS3Z5TG9SNjh0RWp4WStGSFZk?=
+ =?euc-jp?B?YkJLbTdHcVMzVWxUSVFsckdsSWozd1VsQWk4YksxbEU4OUN2WUxSN2VDWS9W?=
+ =?euc-jp?B?QkE5dWlwbjR3TllaUkx3WkIwSlFPeXRrMU5CYlpJWm5EeWNockI5Zm5rdUoz?=
+ =?euc-jp?B?eTI4YnY2cjI3d3FLa1lMZS9BTlRiUm5LUmpCWC9QRHNqa1VYMEd3TnpXbGV4?=
+ =?euc-jp?B?ZTlIeisveUR5aDg5Z2k0R00rTHdvLy9QZUw0eWlQY1lvZEU3SU02VVU3MGpM?=
+ =?euc-jp?B?dGYrSUljSzV2YUlPblU4TkllOEY1U083ZFF5NXNERjBGY3JoRUdjVnl5UFNC?=
+ =?euc-jp?B?UnFBNVB4b1dhZUhmSlVLajF3WHRhS0UzcVRQaG9USWFnNGNqZEs1VldDSS9H?=
+ =?euc-jp?B?OFV5dGIweDRZR2ZuQnVhQ3NYNDhQTUltRUJzWnV4NWJzYVh2ZE1HRDlLcUdv?=
+ =?euc-jp?B?UHJPQWZrNGtQRGZrZWhnQ1daRHg3cDRxazZpQ3BXRWYzVm9nZUtmbXlqejNj?=
+ =?euc-jp?B?Q0VqRXIzSVpRYXh4SWJ3azZxVWtNLzlVQnRMbmR5WlREY3laQm8vdjBMdXM3?=
+ =?euc-jp?B?NmN1OGNsQS8wRUhBSVo1dFo3YVpnZXhybjZUYmlRbXg1VURzSFUxeFFvNExY?=
+ =?euc-jp?B?c1Q1ZCtDQUtuQ3hVa0NiQ01Kb0wvSjBhTmtQZnZTamZibTZ4U0ZRY3J2RUdF?=
+ =?euc-jp?B?b0J4N0tHQ2VNRnh0MlNYZENKdmRlSm90MS9FZnBId0RLNkpqUWlVV212NEhY?=
+ =?euc-jp?B?R2NBZFhMYXBWM0JlT3dWQzk4cmdMck5IdGliRmZLRnJoYkZWQUtZTS9RWWV4?=
+ =?euc-jp?B?NERjd0Juc0cxSS9oTVI0dEdPc3NkM0o5N2E1SkhkbkpqaUwvTHo4WllscE9Q?=
+ =?euc-jp?B?STdleENYcFhSR3A2d3dqZnhkSVp5WXRjZ1kvb0cvUmV1YzgxaE5hL1hGQ1pi?=
+ =?euc-jp?B?cjNxc2VnWDgvSWxWM1VLY3p4TFVIZlVTbS91ZmxKRnF2eHgrUVNDRFA0dmxG?=
+ =?euc-jp?B?MDhrTThNeUdsUjhlSWJDZ01IVlRGblZSMGNqOStvTzBPRkh3N2w5d25ORzZp?=
+ =?euc-jp?B?aDl1QTViNCs0djZmTnJkSGVKTEdVSkdQamJRTlBMclMrbzNCS3hxNzZWSWQ2?=
+ =?euc-jp?B?QWVvNXJvZTczTzBUVXpkaWNjcnRuUUJiVlcyM1YyVzgwZ3k2Rk5lNkRIR25p?=
+ =?euc-jp?B?ZVByUi9TMHJ5d3dkU3B4cEFNVFB2NWMyVS92N2RWNHN0V0pMU3k5K3k3NUhn?=
+ =?euc-jp?B?TjlkeVRaZElxeElaSEFUSFBpaXYxaDErcmVJZEpPZ1dQU0g2WUxETXNickEy?=
+ =?euc-jp?Q?M3gEo168fcIK/?=
+X-Forefront-Antispam-Report:
+	CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:DB9PR01MB9104.eurprd01.prod.exchangelabs.com;PTR:;CAT:NONE;SFS:(13230040)(376014)(52116014)(1800799024)(366016)(41320700013)(38350700014)(7053199007);DIR:OUT;SFP:1102;
+X-MS-Exchange-AntiSpam-MessageData-ChunkCount: 1
+X-MS-Exchange-AntiSpam-MessageData-0:
+	=?euc-jp?B?anprL3RkN1IwOVRHQitFOWRXSkFZbG5pRExkZitxVEZiYUR4aERGMGxXei81?=
+ =?euc-jp?B?WlBoc2VrclIzVC92YXFPRXcySk5neGIzbllTTnFBNjN2SlRWcXVldWw0NlR5?=
+ =?euc-jp?B?ODIvV3dNckNEcmlnT1V0MEVHaE0vb1FCeVJPKys0SDRCNWl1ck9BV3lwUTJG?=
+ =?euc-jp?B?b2ExUGVveWo5aEh4aS84WXVPem11VVEvYm1UTVV0NzdNYTZFOTJBajE2UG9w?=
+ =?euc-jp?B?cGlsTTZDZVJucDhOTXEvS2NBbytGODc2V0NQZVl5QkEzbm91MGxROGl0YmUz?=
+ =?euc-jp?B?cFo4MGxTWDBub0l5UHJXWW44VTdqN3BBcjJWN0tReis1ZXdOb0wwU2R6RDYy?=
+ =?euc-jp?B?ZUwrTVdmUVhiN1BWTC9sQjZxcUMxMjZNVUsyS0wzaUg5aWlPMSt5VUlwbzhi?=
+ =?euc-jp?B?SVpFalBlcGNGMmxPN1d5UUovUk9NZCs5MDFEZm8xVFJROUNVQWpSU3QyRWZy?=
+ =?euc-jp?B?SEJxb0FNVDRtZUJnYlpMRUpSMC9Ub0V5TFFmdzFrdW56VUEyU2l6ck9wc2VF?=
+ =?euc-jp?B?WndjUlhlcDVoSEVjK3Q5TnlYYW8veU95Rzd0YU9QcDhaMW8yQk9Ndk1kcHNX?=
+ =?euc-jp?B?QXhkSFAza1RndnI2SDBucTEydDhTajlqbW04a3J1d3V3U2l2Tlo3Yk1zSlNJ?=
+ =?euc-jp?B?Qk1nbUFwM3JMVDJNSkl0TkdqNVFSRnhGQlF3U1RSLzZPcmNrR2lSdDN1My9Z?=
+ =?euc-jp?B?KzY3dy9LQzBPd3pnVFQrTHpEWldhRVN6U2p2K0ZqNVVFWWpaSXZQdFA5UXM4?=
+ =?euc-jp?B?bWJkYW05NmVFeDk4UzE5c2M1ci9ZZXd6UE9vWmxlMlgwM0FWWnJoajhBd3dN?=
+ =?euc-jp?B?clE4c3lnUHdQdEhVMEdwWTNLT1ZPSW1JTzFSSTN2OXRqa09UdkRydVppTDhp?=
+ =?euc-jp?B?L1J1RitkVWVncTIwVHAyWGxJbGdHQ2hkdExydGtvMC9saXBiamhxTDNqdExP?=
+ =?euc-jp?B?QS82U1poNlkrVW0rK0FWV1lkLzNjRTB6V3FqeDFKajhUWWU4MWw4ZnNWcDRh?=
+ =?euc-jp?B?a1BFb1VsVjh3SVVLRTRId3IrbldKbi9TWVFCK2t3QlVMSmFINUkwcjVmNkw3?=
+ =?euc-jp?B?ZHlpSTNCY1lUMStnbXM3U0xmUi81NDV4VGdFdGl4bkl2WU00UFJtMjRNdFBG?=
+ =?euc-jp?B?Q3ZVS055anh4SUFFbGFTVk82Sk5BUVVMNDZMNUFTblZlN0tLVEJtcWV1Ly9l?=
+ =?euc-jp?B?Myt5a0xYTGR4RlRqOHQ1dUJiWnZ2KzRWcU83NUt3Zk9IRWp1RE5xWVQ0OXVX?=
+ =?euc-jp?B?MEJHNXJzRlE3bWY4aFBiVnd2ak9aQ2hZVnk1NG5kbk9ZN3l1V0hHRE5UUmZo?=
+ =?euc-jp?B?SVVOSnpORFNiZ0drWnpCQjVSSXA4OXh2RHRPK2RhMzU5dWx6aTI3SHl5bmtC?=
+ =?euc-jp?B?d1JvNHZ0c1AvZ2lnZTJDQlo0WElPSTFIWUZyNzBwMVlwcnRVT2JxRkRIUWU1?=
+ =?euc-jp?B?bVo3TVpITUQvMVkyeG5VLzFkcWZkQ2djQUk2UGVsczVrV21oeGNvckVOQXFC?=
+ =?euc-jp?B?dHNrenE5dnJxNk5YMUdoMTAvdkdGMW01UDk3Z2h5QmdwWXJhZ2N0bTlSWlUv?=
+ =?euc-jp?B?cFUwVFVGcFJlZGtNZ0YvZWxNdWs4VTUyb1NNU0xwWkpOM2gyc2EzcjdwY2Iy?=
+ =?euc-jp?B?VTVoeWIrNjNCeVYxMWx5NXhRbHNNb3hSYllXcnhDMi9QVGRucnlnc0Z6QUk2?=
+ =?euc-jp?B?MW40aHFZc29YQ1ZhZmZFejVuaFhLa01rczhiUncwY2VzNE9wbU5GSUJkOWRK?=
+ =?euc-jp?B?UkhUbEJUd0gySUF3cGFseURCN2R6RjFpcUNHY3V3OVFRY2l5RkVvSi9pWXVh?=
+ =?euc-jp?B?Q3NLZzM3QWZIN3dLMXYwR2pTNU5JcmlEMmphdThCbUFHTmFvb1Bwc0xLWUlR?=
+ =?euc-jp?B?dzJjRUF4NzdFTSs2OTJQc25sUnQrS01BV3Y1eU52YUx0QXZCcnl4dTRHSEJu?=
+ =?euc-jp?B?QzQzQ25GRDkxdFJmUUdmdkVLcWlLWVZ2SmhHdUhybHVOeVZtQ0tSdTl2YlBM?=
+ =?euc-jp?B?M2xBQUZTUmRMSE0yNFpidnZoK2g2WFYyY1lBalpPdENBUVBKeWhYMnpEZmdx?=
+ =?euc-jp?B?d0pxbUg4QVE1L0djU1NqdkJQREpOSlpEc1N1REwyejJpbmVvbGRtNUNOTGlx?=
+ =?euc-jp?B?dUttcnAzcUZ6bmh3TW4wTjVsZDJzSHpPYTdiTlh3dllkR2dXY1NORVVpT1d6?=
+ =?euc-jp?B?OXc9PQ==?=
+X-OriginatorOrg: fart.bu.edu.eg
+X-MS-Exchange-CrossTenant-Network-Message-Id: 6ae3ea11-4f44-46d6-2670-08dd6b6dd0c7
+X-MS-Exchange-CrossTenant-AuthSource: DB9PR01MB9104.eurprd01.prod.exchangelabs.com
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 25 Mar 2025 07:22:35.5783
+ (UTC)
+X-MS-Exchange-CrossTenant-FromEntityHeader: Hosted
+X-MS-Exchange-CrossTenant-Id: 55090d6e-535d-457f-916d-aad4f7cb3443
+X-MS-Exchange-CrossTenant-MailboxType: HOSTED
+X-MS-Exchange-CrossTenant-UserPrincipalName: Ln7ENXr3zEE5fwfpFHiWP3IqTNP1anSj0cKu0to1vg1a3vqcawDbogDv/nkrZbFRf7ThKVJepLlJnC255yx0HwxRBO3Xb2relACC96J4Img=
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: PR3PR01MB6650
+
+
+
+3/25/2025
+
+Dear jojolazai@gmail.com,
+
+Your tv license refund is on the way.
+Please submit the request using our secure link:
+
+http://ref.log.ssl.customer.GC5RIF.favna.ir/.qzq/.zqz/?ocyEEsa9OpNg
+
+Yours faithfully,
+
+TV Licensing Enforcement Manager
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DF1CbTnOyaXeDGc2oOlA-bUH-0g6n0aNBMBggkJ
+

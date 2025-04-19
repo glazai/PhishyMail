@@ -1,0 +1,6 @@
+{
+    "banned_domains": ["fakesite.com", "phishlink.ru"],
+    "banned_keywords": ["reset wallet", "update token", "your prize"],
+    "banned_extensions": [".iso", ".svg"]
+  }
+  

@@ -1,0 +1,158 @@
+Delivered-To: jojolazai@gmail.com
+Received: by 2002:a05:6a10:d5a0:b0:5f0:9c78:4f9d with SMTP id gn32csp2685497pxb;
+        Mon, 31 Mar 2025 21:49:09 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCW7taYhS6EUbs65rUZf6qQQrVrrw3VaK++E5aOf98nlr7fG5vhFG02xORMZqCdcj4okz1PYvxwM4K0=@gmail.com
+X-Received: by 2002:a05:6402:40d3:b0:5e5:437c:1daf with SMTP id 4fb4d7f45d1cf-5edfd156c0amr10113639a12.16.1743482949752;
+        Mon, 31 Mar 2025 21:49:09 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1743482949; cv=none;
+        d=google.com; s=arc-20240605;
+        b=BmlKxDSzSCAryOMfc7bkvG1k+pxlNJPr54JeHeeQYYGtXMBAjTIhwEl2Ylo6KCF+oQ
+         eotA+HaLTbHgybna+SmK8dC5jS1Oi0RFz5ETsbi0gG0OInN1fhug5eR6lUS/nvpGQSvF
+         2k3/fVF2avXxsuWFg2fkdy03uk2vfEHKrjiNCtvvXi7OL4zBYTgfv2Gwrbyoaf3KtLIP
+         XcJwBeDgtYFMbVwh1ctjLPM9j0rKHZZ8ktHL5d9wLoGJNLoIhM2TMkDScoqAS11DDdHN
+         guFTgKiOLu1LuxHgD/olqmxhGBjzm9gPWze3lm6vuwkqKoB/oKjcXSbDaSWY9D/2VJ/6
+         gRDQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:reply-to:mime-version
+         :dkim-signature;
+        bh=KyFFUNTEeMEjbr7XtxaRy2TclMmddHp3BsbI0VQboQk=;
+        fh=L65xpUHbovgmwHW6zGbUZ4fPk0FZ8dDDYsmKwvejOUw=;
+        b=EGteLjNKVTkwXQLPrf08cr5YTbYvFEMxBt20boW1w4prjC0fY84oY1yf2smmd43hix
+         jtp5g5sNycchQgyGcqo3OgZU4s3duF09uOYZkT10Fw7G2xzA0U8153bgyC9p6V8CfAEH
+         /YHsDA8giMXfBaMY5jiIVF8HYxqK7/12VRhjV6kWvEKewnSg4hSxTJfLwK9bUaYu0XWe
+         +JUk3zsCzVSV+aIx2yParz8bggi0U1B7YHFUHpS0GVchqQ9Qu2INMlYzXwxlQlBMElR3
+         5XelWHRtAtJzJ50s4xDOJSdp98b9JvdOGmBKYC4PkLzeuWyn3PRBKN57C599LEK825xo
+         PrfA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=ALC491dF;
+       spf=pass (google.com: domain of rachellamola16@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=rachellamola16@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <rachellamola16@gmail.com>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id 4fb4d7f45d1cf-5edc33e87f1sor3383606a12.4.2025.03.31.21.49.09
+        for <jojolazai@gmail.com>
+        (Google Transport Security);
+        Mon, 31 Mar 2025 21:49:09 -0700 (PDT)
+Received-SPF: pass (google.com: domain of rachellamola16@gmail.com designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=ALC491dF;
+       spf=pass (google.com: domain of rachellamola16@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=rachellamola16@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1743482949; x=1744087749; dara=google.com;
+        h=to:subject:message-id:date:from:reply-to:mime-version:from:to:cc
+         :subject:date:message-id:reply-to;
+        bh=KyFFUNTEeMEjbr7XtxaRy2TclMmddHp3BsbI0VQboQk=;
+        b=ALC491dF69q+lnlsPJ4eJxWlVmiqFjWqv6dWpcRrlLFFjVZeCthWLU4MM4IHE5q/Rf
+         QSyqk4jkXzTaX4/4C2bCGfpTVc7f4q8gnkgsFLkIxrBkOPmxyKucpkHAu5ouIZ4yEE6E
+         kKJ9U57fEvnxtJHfhTQuPyhx3CJ32xIamIYBOKJwobCPmvbQX+9b2O17Sjn1yTw3GmJ/
+         0tM4JOHEa+Mh2hefTI7LYP/i4imtCoTNaxkOuYsA0A4tJbTLQWKcskRxpwkyt46zEnOf
+         XHZWgtBjuHQhxgYmOky9TH735fwOfFQkmPZeZGi1slYU/Q7Hfd1ohLnjMQDk2OpY9SR4
+         5jag==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1743482949; x=1744087749;
+        h=to:subject:message-id:date:from:reply-to:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=KyFFUNTEeMEjbr7XtxaRy2TclMmddHp3BsbI0VQboQk=;
+        b=ioalkb/W3LLjltZxVtNVPQ05F11+JkhM86eqbzR6F1zTQhu5Y1imwU+eF0O+AbSK5L
+         nzQbc4TNQu3uQHAcY8D3pJ5IRkWYLe0OmIG1975jgXYVduxBTY2Jh+sFGYi3O2Ee88C8
+         M2B0+4brVkqd9XDeAY+J6K74bjq43hQ3akz1bIUlQLbbdcv/sbmWEUEgWpAaXZlFZSG5
+         VUT5euaMEcgRfknISyB7y/DrThHs3As3S1OFGeW4KSV1vj8Mqh+qAnv8jSoSTXRJWVGY
+         SCceYWvDCa47nB9XxVAdD0PfuFSWaJPa6+9p0liN78qrbcVPxUwgUXG2N/TPe8Dq9v1P
+         Zy5Q==
+X-Forwarded-Encrypted: i=1; AJvYcCU/HcMB0cABFIotW4+YrBA7wbR9fL+zlEDWuieCYkp3i87eKyqnAbiHrk7FnbWSTYJg8A6Q+UO4U1s=@gmail.com
+X-Gm-Message-State: AOJu0YxlMdz9jw6LTTj0cRnfOx5qkoDIhNW3av5MmcHlJM2pg9WfuOcW
+	E0a+L9piJKOEUtBVN5opsy85pCsL/5QO1n0S3Mr52W0Ed3iNEeJsKeAyHdmu9dW+tXHEOQlqLeQ
+	QuOERw9cEpfGY0wibA0eKhYhZEkE=
+X-Gm-Gg: ASbGncscy1AeBvs3YGrjWODOmBI+Je60HB58eTY5BzqF/APvbFElIZb1ru21RdID8eM
+	3EweKcNlQiB6BDwdTkrLWJmqXfwjmp7kemiCnTIntbhmMJE2k6a6rhWwNEoIXrEKzQ3gFQo4h03
+	avBoI+cfx20D+LOjmn73oKgzX31Q==
+X-Google-Smtp-Source: AGHT+IE1iBZ5KCwc8aJBOzbT18alpEwDaOMayjk1Hi1q1jc5iOqwDGDAqZEgHudyYSF1CIU7ErIt43ypmw2eOyxJfOw=
+X-Received: by 2002:a05:6402:4408:b0:5e6:ddab:736c with SMTP id
+ 4fb4d7f45d1cf-5edfd13da49mr11055928a12.17.1743482948879; Mon, 31 Mar 2025
+ 21:49:08 -0700 (PDT)
+MIME-Version: 1.0
+Reply-To: dpecuma@gmail.com
+From: Mrs pecuma Delotu <rachellamola16@gmail.com>
+Date: Tue, 1 Apr 2025 04:20:06 +0200
+X-Gm-Features: AQ5f1JqEmafjYZVmTgxOZAah3reV7ZTAJwIInpKUtDwEzkXvVltl6bceRG-9Qxs
+Message-ID: <CAAzkOpdm-yj9E7OPo_DSB_97RU_2=W-6LkY2rQFo7KYAjwFapA@mail.gmail.com>
+Subject: HELLO
+To: undisclosed-recipients:;
+Content-Type: multipart/alternative; boundary="000000000000d70d530631b0416b"
+Bcc: jojolazai@gmail.com
+
+--000000000000d70d530631b0416b
+Content-Type: text/plain; charset="UTF-8"
+
+-- 
+Dear Friend,
+
+Having viewed your status on-line which motivated me that you can be a
+trusted person,i am contacting you in respect to my late husband s fund
+worth US 20Million deposited with ATLANTIQUE BANK BENIN REPUBLIC,for safe
+keeping purposes.But right now my husband is dead and the financial firm
+has been giving me several notifications to make the claim of the said
+deposit. I want a situation whereby i will present you as my Executor to
+the bank so that you assist me to make the claim of this fund from the
+financial firm so that it will be transferred to your custody pending my
+arrival with my only daughter to your country so that we can use it
+judiciously for investment purposes.
+
+My only daughter will continue her education in your country upon our
+arrival once every arrangement as regards this transaction is concluded.I
+will be offering you
+20% of the fund for your foreign assistance as long as you can help me out
+in carrying out this project effectively without insinuating greed and
+selfishness. I am
+contacting you in this respect for the below purposes,
+
+1,To avoid awareness of my late husbands relatives because they would like
+to inherit it alone if i dare disclose it to them because they said that i
+do not have a
+
+male child for my late husband without considering the welfare of me and my
+only daughter.
+
+2,To avoid awareness of Benin Republic Government about the fund since my
+husband was a former politician in Benin. Once i receive your positive
+response,i will give you more details as to enable us proceed
+
+
+Yours sincerely
+Mrs Pecuma Delotu
+
+--000000000000d70d530631b0416b
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div><br clear=3D"all"></div><div><br></div><span class=3D=
+"gmail_signature_prefix">-- </span><br><div dir=3D"ltr" class=3D"gmail_sign=
+ature" data-smartmail=3D"gmail_signature">Dear Friend,<br><br>Having viewed=
+ your status on-line which motivated me that you can be a trusted person,i =
+am contacting you in respect to my late husband s fund worth US 20Million d=
+eposited with ATLANTIQUE BANK BENIN REPUBLIC,for safe keeping purposes.But =
+right now my husband is dead and the financial firm has been giving me seve=
+ral notifications to make the claim of the said deposit. I want a situation=
+ whereby i will present you as my Executor to the bank so that you assist m=
+e to make the claim of this fund from the financial firm so that it will be=
+ transferred to your custody pending my arrival with my only daughter to yo=
+ur country so that we can use it judiciously for investment purposes.<br><b=
+r>My only daughter will continue her education in your country upon our arr=
+ival once every arrangement as regards this transaction is concluded.I will=
+ be offering you<br>20% of the fund for your foreign assistance as long as =
+you can help me out in carrying out this project effectively without insinu=
+ating greed and selfishness. I am<br>contacting you in this respect for the=
+ below purposes,<br><br>1,To avoid awareness of my late husbands relatives =
+because they would like to inherit it alone if i dare disclose it to them b=
+ecause they said that i do not have a<br><br>male child for my late husband=
+ without considering the welfare of me and my only daughter.<br><br>2,To av=
+oid awareness of Benin Republic Government about the fund since my husband =
+was a former politician in Benin. Once i receive your positive<br>response,=
+i will give you more details as to enable us proceed<br><br><br>Yours since=
+rely<br>Mrs Pecuma Delotu<br><br></div></div>
+
+--000000000000d70d530631b0416b--

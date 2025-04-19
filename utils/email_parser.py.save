@@ -1,0 +1,47 @@
+import email
+from email import policy
+from email.parser import BytesParser
+from bs4 import BeautifulSoup
+import re
+
+def parse_eml_file(file_path):
+    with open(file_path, 'rb') as f:
+        msg = BytesParser(policy=policy.default).parse(f)
+
+    parsed["from"] = msg.get("From", "")
+parsed["to"] = msg.get("To", "")
+parsed["subject"] = msg.get("Subject", "")
+parsed["date"] = msg.get("Date", "")
+parsed["body"] = get_body(msg)
+parsed["urls"] = extract_urls(parsed["body"])
+
+# ✅ Fix: Assign email_from before using it
+email_from = parsed["from"]
+from_domain = ""
+if "@" in email_from:
+    from_domain = email_from.split("@")[-1].strip(">")
+parsed["from_domain"] = from_domain
+    return parsed_email
+
+
+def get_email_body(msg):
+    """Extracts the plain text or HTML body"""
+    body = ""
+    if msg.is_multipart():
+        for part in msg.walk():
+            content_type = part.get_content_type()
+            if content_type == "text/plain":
+                body += part.get_content()
+            elif content_type == "text/html":
+                soup = BeautifulSoup(part.get_content(), "html.parser")
+                body += soup.get_text()
+    else:
+        body = msg.get_content()
+    return body.strip()
+
+
+def extract_urls_from_email(msg):
+    """Extract URLs from the body of the email"""
+    body = get_email_body(msg)
+    url_pattern = r'https?://[^\s)>\]]+'
+    return re.findall(url_pattern, body)

@@ -1,0 +1,11 @@
+From: Fake Billing <billing@fakedomain.com>
+To: user@example.com
+Subject: Invoice Issue - Immediate Attention Required
+Authentication-Results: example.com; spf=fail smtp.mailfrom=fakedomain.com;
+ dkim=fail header.d=fakedomain.com
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Please see the attached invoice for your recent transaction. If there are any=
+ issues, reply immediately.

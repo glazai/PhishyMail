@@ -1,0 +1,17 @@
+From: DHL Express <notifications@dhl-fake.com>
+To: user@example.com
+Subject: Your DHL Package is Delayed
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+
+Dear customer,
+
+Your package has been delayed. Please track your shipment using the link belo=
+w:
+
+http://tracking.dhl-fake.com/track
+
+Thank you,
+DHL Express Support Team

@@ -1,0 +1,106 @@
+Delivered-To: jojolazai@gmail.com
+Received: by 2002:a05:6a10:d5a0:b0:5f0:9c78:4f9d with SMTP id gn32csp8460212pxb;
+        Thu, 10 Apr 2025 12:58:47 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCWgvMzZ58D1IMZhVa9zycIaaITMWmH3a3rUDfbjwvLyTfo/SiJg8DscUs/BK7sKQwQUzbJ55JPirNg=@gmail.com
+X-Received: by 2002:a5d:6d88:0:b0:38d:e401:fd61 with SMTP id ffacd0b85a97d-39eaaecab8bmr4612f8f.49.1744315127105;
+        Thu, 10 Apr 2025 12:58:47 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1744315127; cv=none;
+        d=google.com; s=arc-20240605;
+        b=P7QWOjWFmzQtzFx6HPNirRS9XhNwL0oaDNjZlR0m1UgyZ9kcgLaSnv9kyikgSUJwm2
+         qHkVqMV+IDHFfJHQM7Bi9PU4uC7PPkDgfoPLgAhO3WV6Ast/PwMcOb0lc35hxiuhityJ
+         7uPUGrnQzezCad3FrqLYxl7aZ9jvtWWn204c/9UXSkfE8N3/EpHt33jIVQOm41UOURtK
+         N/YNE/+7892x52HleaBKd1lUqvnFbICt8MDHTRDmXoKOnvXQMqiNQO78TIaZZ860DglP
+         aXlw3MNYt/t8K7YQtkIEAhSNxLxXWQ9fi6dIUo5nJ/Yoqb0CPzErpo4bu9rZa1NhWumZ
+         21uQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=r6rnk/GMz7cccIJZ88140HUDw51neih/E0Gm65WsnQ0=;
+        fh=CccV4dkCbL9YDco2Odv1c/3KXoKK7R0nqYXfBDzlWsE=;
+        b=Ws42x95L+uMLBss6Cg46taD0guOGhoo887HuTNDIA3B66YiuTbI+/RRB6gmJyv6VLC
+         XnKCU6g52HOwtto4aiu5E/VgdWfhbu3Muk4Wdj0WXkWpDtoEGxJaqj5218d9WBR8UMtX
+         7iN0clSiosPGrNBin8XprzEBLfJgc3s3TM4QxqtYmVxgAhfD8iPykGpU2qpwA0uenyqk
+         +CiGlArklKgTfQ0hHmDPt93ni+xGNYaN8pQwnhsnP6cN5bieHnxG8nriqtcwfXhH8IsO
+         Z0uV/zfqYWyv3D8eD7Wsvt+ADkGflO8XR0h2Xs4cFiCMtVhdrfH6XkNtmBp7hk2zoGDM
+         YJYQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=OLfaz4Tq;
+       spf=pass (google.com: domain of hardvera932@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=hardvera932@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <hardvera932@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id ffacd0b85a97d-39d893eee02sor1532973f8f.6.2025.04.10.12.58.46
+        for <jojolazai@gmail.com>
+        (Google Transport Security);
+        Thu, 10 Apr 2025 12:58:47 -0700 (PDT)
+Received-SPF: pass (google.com: domain of hardvera932@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=OLfaz4Tq;
+       spf=pass (google.com: domain of hardvera932@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=hardvera932@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1744315126; x=1744919926; dara=google.com;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=r6rnk/GMz7cccIJZ88140HUDw51neih/E0Gm65WsnQ0=;
+        b=OLfaz4Tqts4hm2XF1YiUYB/rZtyqjHBYX2j+JCaAWz+r5qGWopj8TUuH7atGbJkGWB
+         2toyWhs63zOCoLOr2pnsDEWhP9Y+6FWeB1MoyieVV0EnY8IaAeuW2MDj29B5jKQ2W5AI
+         DHnbDYKSN6yep+hY+tirCk1GC6Ls2FV7klLrIa8/yxEHA/glTdVpvszG1dMcMNJ9AzFt
+         FB8bHrzauYLe0BDLUUeTeQ9ZeUbB3ovZ5/MKBDaUAZ6/0Wj0M/5uo8R82U3AQUxNKem1
+         WuXuZDba3fVMukI2UGdpG0tXemlncHcBP+rk43+4rbXg7+8hCL/MFWyzcqAVbkNtSeUg
+         HfrQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1744315126; x=1744919926;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=r6rnk/GMz7cccIJZ88140HUDw51neih/E0Gm65WsnQ0=;
+        b=XuRtgXpyXXxYiA3xD+3vqKE8NezYXdUynLJeV5s4JVuOrnQz4sBzCZNzx7IwNgiA1U
+         wa8jg4GWXWS+cH4AAPuaucSw1qt7EHSisTvneeVzSLLgtKv9OVLb2lpImCeZSV5PaZ0P
+         QYNnSD0ejjQP5pgoRFc2phXSYHhuMPZtELLsHua+9UwTAHpDvXBasuIc0pU7uZs+UA9w
+         unlX9r5LYX684ByRegpBg72mGAfNK+79K9WLN3Tq1eezyHA0gQGaWzoS4nXowr8a4w2q
+         2x8Czqq7dZvBLcbc5GID2zEtNw9Qpxh66OY8Xeco31k2aH3m24U3kH/oj1hbTI+fbJwP
+         H3Pw==
+X-Forwarded-Encrypted: i=1; AJvYcCUEF6FMTHs4Fp2VeLlMnc5fWQANOpIcfUaoAmGJfmX1fbt6vhgELPWYQfIVwIhN5AGF5y/ubgg8zGs=@gmail.com
+X-Gm-Message-State: AOJu0YzUd+gx7krUyYUS4QlcAwEAzfD2hHt8Im/6Fx0bYYAsHvgCT0Jg
+	oPqEN2IQtAiQdDWQRLUD6MV6D3u0rbFjvh7GPYSnFde+dewzj3vgmGinHnPaxmdeQCQwIytPiX4
+	fE/Fcmb+G11qVqjyPFdZU2gi5R6w=
+X-Gm-Gg: ASbGncucCGmXGTRnzgvi+wSTkeBwvik2LogXOSLwVflci5doBhJM2CBzGSGZuXpzR95
+	Q3pjAQ3v06bMpfhtNyzBqoRXTMnwa8HNXR/n6RW1yRV3oNhOdmd840Cl1V+YLpfcATCHzXycMgi
+	xzY6qsq0GYjSP+o9CqSehj
+X-Google-Smtp-Source: AGHT+IG+9XIXmhVyxW7deM31fRhazMfcshuDvZSgTaMq13G2yP5G1jCaRBQs/4VO6CdxKe9ywJ89N3K/W9eXshgnPEs=
+X-Received: by 2002:a5d:64cb:0:b0:390:fc83:a070 with SMTP id
+ ffacd0b85a97d-39e9f3cb6f6mr31611f8f.0.1744315126111; Thu, 10 Apr 2025
+ 12:58:46 -0700 (PDT)
+MIME-Version: 1.0
+From: Vera Hard <hardvera932@gmail.com>
+Date: Thu, 10 Apr 2025 21:58:34 +0200
+X-Gm-Features: ATxdqUHwDHY0UAN1foUBWRe54_pLN3QDnQ9HMfZ9eT9MTXbN8WoTUnP7fnvezfc
+Message-ID: <CANe9T2rZdhKjY48XwkJh48M8a1-NtsEHnrMowGyM5g6qW8BUPw@mail.gmail.com>
+Subject: Bequest Notification
+To: undisclosed-recipients:;
+Content-Type: multipart/alternative; boundary="00000000000077e952063272035b"
+Bcc: jojolazai@gmail.com
+
+--00000000000077e952063272035b
+Content-Type: text/plain; charset="UTF-8"
+
+I hope this message finds you well.
+
+I kindly request that you reach out to Li Cheng  (licheng1749@hotmail.com)
+regarding an inheritance claim. It appears that
+you may be eligible for a significant sum due to your shared last name with
+his  late client.
+
+--00000000000077e952063272035b
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">I hope this message finds you well.<br><br>I kindly reques=
+t that you reach out to Li Cheng =C2=A0(<a href=3D"mailto:licheng1749@hotma=
+il.com">licheng1749@hotmail.com</a>) regarding an inheritance claim. It app=
+ears that<br>you may be eligible for a significant sum due to your shared l=
+ast name with his =C2=A0late client.<br><br><br><br></div>
+
+--00000000000077e952063272035b--

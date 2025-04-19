@@ -1,0 +1,31 @@
+From: Fake Support <support@fakesite.com>
+To: test@example.com
+Subject: =?utf-8?q?=F0=9F=9A=A8?= Urgent: Reset Your Wallet Now
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============5968305347510778949=="
+
+--===============5968305347510778949==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+
+Hello,
+
+To secure your account, please reset your wallet immediately. You can do that=
+ at:
+http://login.fakesite.com/reset
+
+Failure to do so may result in access loss.
+
+Thank you,
+Security Team
+
+--===============5968305347510778949==
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="payload.iso"
+MIME-Version: 1.0
+
+VGhpcyBpcyBhIGZha2UgSVNPIGZpbGUgcHJldGVuZGluZyB0byBiZSBhbiBpbnN0YWxsZXIu
+
+--===============5968305347510778949==--

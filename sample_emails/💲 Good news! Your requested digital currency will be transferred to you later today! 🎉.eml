@@ -1,0 +1,253 @@
+Delivered-To: jojolazai@gmail.com
+Received: by 2002:a05:6a11:c01:b0:52f:4439:7931 with SMTP id rl1csp545431pxb;
+        Thu, 1 Feb 2024 14:14:07 -0800 (PST)
+X-Received: by 2002:a05:6902:1b8d:b0:dbe:abef:c214 with SMTP id ei13-20020a0569021b8d00b00dbeabefc214mr536957ybb.59.1706825647114;
+        Thu, 01 Feb 2024 14:14:07 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1706825647; cv=none;
+        d=google.com; s=arc-20160816;
+        b=IWEPh/fFG+//R0JseBbuxT5CaDMPi7oB4oxFTYbZTfCqBaULYpEK+qjWHX9YGzbBDb
+         dZrk2MqUmokpp234ZTvPtnP78n628L9JlPSOcjQIcyVtxOr+OAPBUvpvna7Iydo4DXsb
+         ake75li5HyWkVYjkM+Wx7vJQTfBx5lmDKNWdCO1xwy/AB3wivx6wdFi89+OvRf1Y7PSI
+         twcK7wHrMMd8Eq/TQ5/vq6mvfc0Z6a48v6Zhfnw0DEoGSK2N9yQkgV/n3lDxwjaBP4HC
+         SxhFdLHV2lUZ5WulMBtEgmBi94OtNnYW4QfdOtuzGP1DqdWzst67N6s0eeCybMnV9PGi
+         bKrQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=Szg+zVcNCVYouTOXmT6500qh+EZ58sBVovGcAKstrhI=;
+        fh=cEgUFicUIjn+YgKb98ycU4umIi5dkpVuDvJFN51R640=;
+        b=JUTL69TvWA7CutTeiqEfXNrPAHfK9/Oh/voUYuFL6y6AMkHD6lwA5mT5v4mngE/W7y
+         b8wYperxhrJxf1+ZJ+5TPgcY4ofwPzJC2GNon+Vjh09kE0xL0sqODEt1fNsuV8nKJU5U
+         CSVMuiI2Tsaah+eFHWfN3sf/dZZSR5GkQ++2TCPDvberhjS3b0etc4LuaRhJZam1yNAc
+         vNus4OQfj2Gwz9cFXRfWb0t/QIxyiOvj4ajKqPekV11JWpy6EGKtaU146PSIR2GF9FBH
+         SEHZ7IqEfwUNUhzRVQJJVck3oQJJYc5DUkeAFlyz3BGI3brA4ATVdAuZcJtLzgC6RsjF
+         rvgg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=MQOZoVOM;
+       spf=pass (google.com: domain of campbellhfk90jz@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=campbellhfk90jz@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+X-Forwarded-Encrypted: i=0; AJvYcCUnV1rUj173t871Gxv81VHpaODeE4cfEGrLlV3cDhhaadNqiwHqd+mWgiWhTBmjxO/awpP/fw7vdnjFB1eEfvHPee8S12HqgtR5vJq2zDhDYthi2vDbTT/yLAAF/3+J1DIeDi5hXaZQHpXkb0cKEuLo9Fu83Z/pwVXRCozv5XmxzJXoz7JOvAzRXbHzybUL362OQNsKoVLJBFAuOgnc8mIE14xBCUFT536ZAp8/28VKmT3F7Gk5
+Return-Path: <campbellhfk90jz@gmail.com>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id y38-20020a25ad26000000b00dc226e50a79sor268557ybi.19.2024.02.01.14.14.06
+        (Google Transport Security);
+        Thu, 01 Feb 2024 14:14:07 -0800 (PST)
+Received-SPF: pass (google.com: domain of campbellhfk90jz@gmail.com designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=MQOZoVOM;
+       spf=pass (google.com: domain of campbellhfk90jz@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=campbellhfk90jz@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1706825646; x=1707430446; dara=google.com;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=Szg+zVcNCVYouTOXmT6500qh+EZ58sBVovGcAKstrhI=;
+        b=MQOZoVOM0HQT3BJnftcZKrroEbWGR/Pe0yhLPEUM9d4GuhoGZig8X3S3O2lF5HQOGH
+         KZcgdw72bnmgatBhUfREpGFDcn2t1OxQjv6l2wHe4brAFAV8lxWcXCGn1nlch+0l1VYl
+         WcZITZDNuOSDdvrrg4r8p3qLLmIqnAZHnMxOC9PqHBqANxRrPF4jOPIYBU7CooOjUK2H
+         dqaJOFiEwZRKfNm84jtw56Mifrvg/ODh2qbtPzjKTXiB9BMNtgImt7VATAQHdXt2ziqn
+         rHmTF7w7wpiBgtIHkWgPdUd8m9SB0KiyfO65j3qq6dd/rlVbCPGO4mWJ0INHicDjX1pN
+         cnrg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1706825646; x=1707430446;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=Szg+zVcNCVYouTOXmT6500qh+EZ58sBVovGcAKstrhI=;
+        b=kQUYhOODA0xVvx9iJQikUc3qTK9zTst5uZGJGcFxvsbieaKswzkpzBHQVputAfNMfm
+         EZTH+/7FOG/9JWYNnDKS7PDamJaWTHngGUHwow7AzrZws44h27ezj9wSH8fL4hYjToHQ
+         OCoM9SiRdyZ2lWcVJ3DvozCrvUjEKZOEEK0A6E3MPcvNi2BVFNjo/fLlNLZ3Brp1xJFh
+         eH7tmpHe15Mo7lo/rnU1zGl50tY6Il16t+IsOWbCvM2MH5MGBDUYyf1bJVbU/wffMVMp
+         hcMVmBgE6tNBQY+x1zYXZEAwBGpHemLaRTn9YtUhfX7XwHYwDB4PI3Hqas3py3q/jj1X
+         LaIQ==
+X-Gm-Message-State: AOJu0YyMLmaY5qufjGesoXbF1KJYRRAPF0VHzry3EGadlW+JpssnHLe8
+	hA/vGvZ1AZWYkB8uvN7pe2PAvxoZYcBsWGOhbMqqqaS2Au8eZF7CaEi5kHPEzO16vdMANWGb9Qa
+	MCbXKGDCMXeovafA3ApCftdTsXvoXUGNCLTAx8hBIFiA=
+X-Google-Smtp-Source: AGHT+IHtBHrCUJT9li9tjr6GjdlJaSwHeo/LM86Jpn8LBLAozYP5X+WhxEXUpngwtHYP3odDFsmfXziFxifDW3Uobn4=
+X-Received: by 2002:a25:bc92:0:b0:dc6:e4f8:7e20 with SMTP id
+ e18-20020a25bc92000000b00dc6e4f87e20mr440875ybk.5.1706825646175; Thu, 01 Feb
+ 2024 14:14:06 -0800 (PST)
+MIME-Version: 1.0
+From: Jason <campbellhfk90jz@gmail.com>
+Date: Fri, 2 Feb 2024 01:13:54 +0300
+Message-ID: <CAOKeaHQeqxWiySDG9uOtGVgmMEK5hLqxgdLZsKPO7EtQ2z5Ynw@mail.gmail.com>
+Subject: =?UTF-8?Q?=F0=9F=92=B2_Good_news=21_Your_requested_digital_currency_will?=
+	=?UTF-8?Q?_be_transferred_to_you_later_today=21_=F0=9F=8E=89?=
+To: gabriela.safrova@gmail.com, nefedovss@gmail.com, sofia.alons@gmail.com, 
+	dobermann1181@gmail.com, dominic.reeves@gmail.com, jojolazai@gmail.com, 
+	z33tlex@gmail.com
+Content-Type: multipart/mixed; boundary="00000000000055f7ad06105950cb"
+
+--00000000000055f7ad06105950cb
+Content-Type: multipart/alternative; boundary="00000000000055f7ab06105950c9"
+
+--00000000000055f7ab06105950c9
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+=F0=9F=8F=A2=E2=9C=89=EF=B8=8F=F0=9F=98=B1 Our team will visit your office =
+to assess the damages and provide a
+comprehensive report. We understand the urgency of the situation and are
+committed to assisting you in any way we
+
+d=C3=A8s que can. Our highly
+
+
+
+
+
+
+
+
+
+*d=C3=A8s que skilled professionals will carefully examine the affected are=
+as
+and evaluate the extent of the damages. =F0=9F=94=8D=F0=9F=92=BC=F0=9F=93=
+=9D During our d=C3=A8s que
+assessment, we will meticulously document the damages, taking photographs
+and notes to ensure a thorough and accurate report. Our team has extensive
+experience in assessing various types of damages, including structural,
+water, fire, and natural disasters. We will check for any potential safety
+hazards and inform you promptly about any immediate actions that may need
+to be taken d=C3=A8s que to mitigate further damages.=F0=9F=9A=A7=F0=9F=93=
+=88=F0=9F=92=B0 Once our assessment
+is complete, we will compile a comprehensive report that outlines the
+damages, their causes, and the recommended repairs. This report d=C3=A8s qu=
+e
+will serve as a valuable resource for your insurance claim and can also
+help you prioritize the necessary repairs.=F0=9F=92=AA=F0=9F=93=9E=F0=9F=8C=
+=9F Our team is dedicated to
+providing you with the highest level of assistance and support throughout
+this process. We understand that dealing with damages can be stressful and
+time-consuming, and we are here to alleviate that burden. Our experts will
+be available to answer any questions you may have and guide you through the
+necessary steps to restore your office to its pre-damaged condition.=F0=9F=
+=8F=A2=F0=9F=94=A8=F0=9F=94=A7
+Rest assured that we have the expertise, resources, and commitment to
+handle this situation with utmost professionalism and efficiency. We will
+work diligently to ensure that your office is restored to its full
+functionality as quickly as possible. =F0=9F=A4=9D=F0=9F=8C=88=F0=9F=92=BC =
+Thank you for entrusting us
+with this important task. We look forward to working closely with you and
+providing the support you need during this challenging time. *
+
+--00000000000055f7ab06105950c9
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">=F0=9F=8F=A2=E2=9C=89=EF=B8=8F=F0=9F=98=B1 Our team will v=
+isit your office to assess the damages and provide a comprehensive report. =
+We understand the urgency of the situation and are committed to assisting y=
+ou in any way we <p>d=C3=A8s que  can. Our highly <b>d=C3=A8s que  skilled =
+professionals will carefully examine the affected areas and evaluate the ex=
+tent of the damages. <br><br>=F0=9F=94=8D=F0=9F=92=BC=F0=9F=93=9D During ou=
+r <div>d=C3=A8s que  assessment, we will meticulously document the damages,=
+ taking photographs and notes to ensure a thorough and accurate report. Our=
+ team has extensive experience in assessing various types of damages, inclu=
+ding structural, water, fire, and natural disasters. We will check for any =
+potential safety hazards and inform you promptly about any immediate action=
+s that may need to be taken <big>d=C3=A8s que  to mitigate further damages.=
+<br><br>=F0=9F=9A=A7=F0=9F=93=88=F0=9F=92=B0 Once our assessment is complet=
+e, we will compile a comprehensive report that outlines the damages, their =
+causes, and the recommended repairs. This report <h4>d=C3=A8s que  will ser=
+ve as a valuable resource for your insurance claim and can also help you pr=
+ioritize the necessary repairs.<br><br>=F0=9F=92=AA=F0=9F=93=9E=F0=9F=8C=9F=
+ Our team is dedicated to providing you with the highest level of assistanc=
+e and support throughout this process. We understand that dealing with dama=
+ges can be stressful and time-consuming, and we are here to alleviate that =
+burden. Our experts will be available to answer any questions you may have =
+and guide you through the necessary steps to restore your office to its pre=
+-damaged condition.<br><br>=F0=9F=8F=A2=F0=9F=94=A8=F0=9F=94=A7 Rest assure=
+d that we have the expertise, resources, and commitment to handle this situ=
+ation with utmost professionalism and efficiency. We will work diligently t=
+o ensure that your office is restored to its full functionality as quickly =
+as possible. <br><br>=F0=9F=A4=9D=F0=9F=8C=88=F0=9F=92=BC Thank you for ent=
+rusting us with this important task. We look forward to working closely wit=
+h you and providing the support you need during this challenging time.  </h=
+4></big></div></b></p></div>
+
+--00000000000055f7ab06105950c9
+Content-Type: text/calendar; charset="UTF-8"; method=REQUEST
+Content-Transfer-Encoding: 7bit
+
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20240118
+DTEND;VALUE=DATE:20240203
+DTSTAMP:20240118T200129Z
+UID:ufnj3mbmpydq7w4wdn8inwsjnz@google.com
+X-MICROSOFT-CDO-OWNERAPPTID:1721561678
+ORGANIZER;CN=fiq55@gmail.com:mailto:fiq55@gmail.com
+ATTENDEE;RSVP=TRUE;CN=fiq55@gmail.com;X-NUM-GUESTS=0:mailto:fiq55@gmail.com
+ATTENDEE;RSVP=TRUE;CN=Foboky Lysydot;X-NUM-GUESTS=0:mailto:svh010238257@gmail.com
+ATTENDEE;RSVP=TRUE;CN=Jisynetu Wysyfivy;X-NUM-GUESTS=0:mailto:qnj361413242@gmail.com
+ATTENDEE;RSVP=TRUE;CN=Vecqe Lisgu;X-NUM-GUESTS=0:mailto:dro881433576@gmail.com
+ATTENDEE;RSVP=TRUE;CN=Tezucu Kygery;X-NUM-GUESTS=0:mailto:sbx435433336@gmail.com
+ATTENDEE;RSVP=TRUE;CN=Kovo Geheziqe;X-NUM-GUESTS=0:mailto:yiw173865281@gmail.com
+ATTENDEE;RSVP=TRUE;CN=Zopobic Riqtu;X-NUM-GUESTS=0:mailto:kcu823471865@gmail.com
+ATTENDEE;RSVP=TRUE;CN=Xipby Leze;X-NUM-GUESTS=0:mailto:xfk756343561@gmail.com
+ATTENDEE;RSVP=TRUE;CN=Gyjojoco Vohzy;X-NUM-GUESTS=0:mailto:wxa031884583@gmail.com
+ATTENDEE;RSVP=TRUE;CN=Tiji Wore;X-NUM-GUESTS=0:mailto:taw311643333@gmail.com
+CREATED:20240118T200129Z
+DESCRIPTION:Open Site - https://docs.google.com/drawings/d/18
+ bqt4pZujcM8EZjWzAXaxOXoqe7ctIS-HPZ3bhewXt0/preview
+ #37563888
+LAST-MODIFIED:20240118T200129Z
+LOCATION:
+URL:https://docs.google.com/drawings/d/18bqt4pZujcM8EZjWzAXaxOXoqe7ctIS-HPZ3bhewXt0/preview#26826
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Maintaining tax exempt status with the irs the fo
+ undation is committed
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:This is an event reminder
+TRIGGER:-P0DT0H30M0S
+END:VALARM
+END:VEVENT
+END:VCALENDAR
+
+--00000000000055f7ab06105950c9--
+--00000000000055f7ad06105950cb
+Content-Type: text/calendar; charset="US-ASCII"; name="Open file 4610467805531.ics"
+Content-Disposition: attachment; filename="Open file 4610467805531.ics"
+Content-Transfer-Encoding: base64
+Content-ID: <l_qbw5ijt11>
+X-Attachment-Id: l_qbw5ijt11
+
+QkVHSU46VkNBTEVOREFSDQpQUk9ESUQ6LS8vR29vZ2xlIEluYy8vR29vZ2xlIENhbGVuZGFyIDcw
+LjkwNTQvL0VODQpWRVJTSU9OOjIuMA0KQ0FMU0NBTEU6R1JFR09SSUFODQpNRVRIT0Q6UkVRVUVT
+VA0KQkVHSU46VkVWRU5UDQpEVFNUQVJUO1ZBTFVFPURBVEU6MjAyNDAxMTgNCkRURU5EO1ZBTFVF
+PURBVEU6MjAyNDAyMDMNCkRUU1RBTVA6MjAyNDAxMThUMjAwMTI5Wg0KVUlEOnVmbmozbWJtcHlk
+cTd3NHdkbjhpbndzam56QGdvb2dsZS5jb20NClgtTUlDUk9TT0ZULUNETy1PV05FUkFQUFRJRDox
+NzIxNTYxNjc4DQpPUkdBTklaRVI7Q049ZmlxNTVAZ21haWwuY29tOm1haWx0bzpmaXE1NUBnbWFp
+bC5jb20NCkFUVEVOREVFO1JTVlA9VFJVRTtDTj1maXE1NUBnbWFpbC5jb207WC1OVU0tR1VFU1RT
+PTA6bWFpbHRvOmZpcTU1QGdtYWlsLmNvbQ0KQVRURU5ERUU7UlNWUD1UUlVFO0NOPUZvYm9reSBM
+eXN5ZG90O1gtTlVNLUdVRVNUUz0wOm1haWx0bzpzdmgwMTAyMzgyNTdAZ21haWwuY29tDQpBVFRF
+TkRFRTtSU1ZQPVRSVUU7Q049SmlzeW5ldHUgV3lzeWZpdnk7WC1OVU0tR1VFU1RTPTA6bWFpbHRv
+OnFuajM2MTQxMzI0MkBnbWFpbC5jb20NCkFUVEVOREVFO1JTVlA9VFJVRTtDTj1WZWNxZSBMaXNn
+dTtYLU5VTS1HVUVTVFM9MDptYWlsdG86ZHJvODgxNDMzNTc2QGdtYWlsLmNvbQ0KQVRURU5ERUU7
+UlNWUD1UUlVFO0NOPVRlenVjdSBLeWdlcnk7WC1OVU0tR1VFU1RTPTA6bWFpbHRvOnNieDQzNTQz
+MzMzNkBnbWFpbC5jb20NCkFUVEVOREVFO1JTVlA9VFJVRTtDTj1Lb3ZvIEdlaGV6aXFlO1gtTlVN
+LUdVRVNUUz0wOm1haWx0bzp5aXcxNzM4NjUyODFAZ21haWwuY29tDQpBVFRFTkRFRTtSU1ZQPVRS
+VUU7Q049Wm9wb2JpYyBSaXF0dTtYLU5VTS1HVUVTVFM9MDptYWlsdG86a2N1ODIzNDcxODY1QGdt
+YWlsLmNvbQ0KQVRURU5ERUU7UlNWUD1UUlVFO0NOPVhpcGJ5IExlemU7WC1OVU0tR1VFU1RTPTA6
+bWFpbHRvOnhmazc1NjM0MzU2MUBnbWFpbC5jb20NCkFUVEVOREVFO1JTVlA9VFJVRTtDTj1HeWpv
+am9jbyBWb2h6eTtYLU5VTS1HVUVTVFM9MDptYWlsdG86d3hhMDMxODg0NTgzQGdtYWlsLmNvbQ0K
+QVRURU5ERUU7UlNWUD1UUlVFO0NOPVRpamkgV29yZTtYLU5VTS1HVUVTVFM9MDptYWlsdG86dGF3
+MzExNjQzMzMzQGdtYWlsLmNvbQ0KQ1JFQVRFRDoyMDI0MDExOFQyMDAxMjlaDQpERVNDUklQVElP
+TjpPcGVuIFNpdGUgLSBodHRwczovL2RvY3MuZ29vZ2xlLmNvbS9kcmF3aW5ncy9kLzE4DQogYnF0
+NHBadWpjTThFWmpXekFYYXhPWG9xZTdjdElTLUhQWjNiaGV3WHQwL3ByZXZpZXcNCiAjMzc1NjM4
+ODgNCkxBU1QtTU9ESUZJRUQ6MjAyNDAxMThUMjAwMTI5Wg0KTE9DQVRJT046DQpVUkw6aHR0cHM6
+Ly9kb2NzLmdvb2dsZS5jb20vZHJhd2luZ3MvZC8xOGJxdDRwWnVqY004RVpqV3pBWGF4T1hvcWU3
+Y3RJUy1IUFozYmhld1h0MC9wcmV2aWV3IzI2ODI2DQpTRVFVRU5DRTowDQpTVEFUVVM6Q09ORklS
+TUVEDQpTVU1NQVJZOk1haW50YWluaW5nIHRheCBleGVtcHQgc3RhdHVzIHdpdGggdGhlIGlycyB0
+aGUgZm8NCiB1bmRhdGlvbiBpcyBjb21taXR0ZWQNClRSQU5TUDpPUEFRVUUNCkJFR0lOOlZBTEFS
+TQ0KQUNUSU9OOkRJU1BMQVkNCkRFU0NSSVBUSU9OOlRoaXMgaXMgYW4gZXZlbnQgcmVtaW5kZXIN
+ClRSSUdHRVI6LVAwRFQwSDMwTTBTDQpFTkQ6VkFMQVJNDQpFTkQ6VkVWRU5UDQpFTkQ6VkNBTEVO
+REFSDQo=
+--00000000000055f7ad06105950cb--

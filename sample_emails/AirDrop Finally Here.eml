@@ -1,0 +1,248 @@
+Delivered-To: jojolazai@gmail.com
+Received: by 2002:a05:6a10:958a:b0:5a6:8341:c3ca with SMTP id h10csp1664734pxd;
+        Sat, 21 Sep 2024 17:17:31 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IF8ACfDLCNU8zR6wErueC4ji8UGOrLdJmP95rua+Ut0Mm174k/3zKB+d40NvMMGKB57P1Bs
+X-Received: by 2002:a05:6000:ac8:b0:374:ca43:cda5 with SMTP id ffacd0b85a97d-37a41fcf478mr3206122f8f.0.1726964251026;
+        Sat, 21 Sep 2024 17:17:31 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1726964251; cv=none;
+        d=google.com; s=arc-20240605;
+        b=MdcKdV3zgicc1DGWkhNQmeJaUefVUHyGxG1tHQAOgfFLJt+TIfelEvsVH0gUI1Og2m
+         AzulAZaVdpk+rOFoULGRnmK1OoW4G7bnC/GFxpEy6Ps8yqcqYNzADYao1wDaHQ8M798L
+         S70GSICyLnJtsC8qLGz7nKe/8ValX78FTkjEaEm3Py21bmJRfUSIHRxyhBEaKlPgAuji
+         KY+mm/xENprvVHGVZJKGLPsdyKv+t+Owc5Shl7bnLvC/qQbEgMlhu4lVRN/nUz8z7oFl
+         xC3PighID+gZMDc4AKQPR63MYFA7RIE8DXkGN3TzronlGlMvKnyntr1uL412cwz8X5cx
+         LRpg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=dkim-signature:thread-topic:thread-index:mime-version:subject
+         :message-id:to:from:date;
+        bh=XR1kFWRJeS6F3cd8BWXNI1tDRGZuP+UXz/jBpX/wL4E=;
+        fh=ry6eTa10KGbHPLNH9d2vDqBKKMwC1K8/jK6BySQo6mQ=;
+        b=dseeKitDj3ZFnyUydYJpb2DStWqqK42NOhGMfdfZCfYoZZwO1lubqABNE53YPaodju
+         085e57NLHEAkWqfiTippLzsqJEhjaLbGsJScUdlfvvObBjuocyrzrpNKO9Rvrxo5KMK3
+         7jt6nFJsyAi/57now4mJ8KigR6cSzRdfWRx5GHsFempuaFbw4zEiOHcyR2C6uH3Eq5Ir
+         38jQIO6xZFNjb+1JkcYTCcfG2GtfC19+gRtjAImxBt1sVxidPGb4oPd2VU640N/UBJ3w
+         M4U3Kw9OM7XrgFvVye/je+EbAkpcnNIDQYUgeWpgjoUWVvTHQ5GDN3Jb3w20+BUtIm0s
+         Tcgg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@telenet.be header.s=r24 header.b=i1v5S63y;
+       spf=pass (google.com: domain of koen.morjean@telenet.be designates 2a02:1800:110:4::f00:19 as permitted sender) smtp.mailfrom=koen.morjean@telenet.be;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=telenet.be
+Return-Path: <koen.morjean@telenet.be>
+Received: from laurent.telenet-ops.be (laurent.telenet-ops.be. [2a02:1800:110:4::f00:19])
+        by mx.google.com with ESMTPS id ffacd0b85a97d-378e781d014si7075092f8f.855.2024.09.21.17.17.30
+        for <jojolazai@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 21 Sep 2024 17:17:31 -0700 (PDT)
+Received-SPF: pass (google.com: domain of koen.morjean@telenet.be designates 2a02:1800:110:4::f00:19 as permitted sender) client-ip=2a02:1800:110:4::f00:19;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@telenet.be header.s=r24 header.b=i1v5S63y;
+       spf=pass (google.com: domain of koen.morjean@telenet.be designates 2a02:1800:110:4::f00:19 as permitted sender) smtp.mailfrom=koen.morjean@telenet.be;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=telenet.be
+Received: from zcshobo125.telenet-ops.be ([IPv6:2a02:1800:110:86::f00:7d])
+	by laurent.telenet-ops.be with cmsmtp
+	id FCHW2D00Z2EKDou01CHWpK; Sun, 22 Sep 2024 02:17:30 +0200
+Date: Sun, 22 Sep 2024 02:17:30 +0200 (CEST)
+From: "Lido.Fi" <koen.morjean@telenet.be>
+To: jojolazai@gmail.com
+Message-ID: <864557002.6571209.1726964250752.JavaMail.zimbra@telenet.be>
+Subject: AirDrop Finally Here
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="=_49cc0f33-8f60-471d-bebf-4e32c30ed212"
+X-Originating-IP: [::ffff:106.221.133.124]
+Thread-Index: /x22/JjEcTgdTdqwgPEEXs5/qbwMLQ==
+Thread-Topic: AirDrop Finally Here
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=telenet.be; s=r24;
+	t=1726964250; bh=v2B0eK1SA34hJs2YVtBY67RG8xezDappb+JljuyY0Vs=;
+	h=Date:From:To:Message-ID:Subject:MIME-Version:Content-Type:From;
+	b=i1v5S63ypWJbMI3Yc4fk/bCD3/Dcjs759hqonbUUsUeClKjMyNlKE4ONk26xfsuLN
+	 E9Lvmld0wfBrVLcRp5rIIjQUGDSO8AQCeiD7QzOieZr7aeKekizDgmY9NA+a4ZHvOj
+	 B9GI4nWxaQZK56ZvBpmDuysMXSQduuAbb9lFz6LifakZ+UeMXlZ+G0PVbreudS9dUp
+	 6m3lSmwGrRWo9wwTxadwNkhGU6unCBNEl7XXA7DLcgiTPdF+3AW2by2hdll2AhYiGz
+	 IE+b3l9s9mhHf03kHM5iuFSIVYliJpIdR0PNL4k9YE2wDv66vrgxYOJ+GRMWwuBboU
+	 V35Q97Z8ynm3g==
+
+--=_49cc0f33-8f60-471d-bebf-4e32c30ed212
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+Welcome 
+
+--=_49cc0f33-8f60-471d-bebf-4e32c30ed212
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <div>
+        <u></u>
+        <div style=3D"background-color:#dbe0e9">
+          <div style=3D"display:none;max-height:0px;overflow:hidden">Bonus!=
+ </div>
+          <div style=3D"background-color:#dbe0e9">
+            <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" role=3D"presentation" style=3D"background:rgb(25,44,56);width:100=
+%">
+              <tbody>
+                <tr>
+                  <td>
+                    <div style=3D"margin:0px auto;max-width:600px">
+                      <table align=3D"center" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" role=3D"presentation" style=3D"width:100%">
+                        <tbody>
+                          <tr>
+                            <td style=3D"direction:ltr;font-size:0px;paddin=
+g:0;text-align:center">
+                              <div  style=3D"font-size:0px;text-align:left;=
+direction:ltr;display:inline-block;vertical-align:top;width:100%">
+                                <table border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" role=3D"presentation" style=3D"vertical-align:top" width=3D"10=
+0%">
+                                  <tbody>
+                                    <tr>
+                                      <td align=3D"center" style=3D"font-si=
+ze:0px;padding:0;word-break:break-word">
+                                        <table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" role=3D"presentation" style=3D"border-collapse:collaps=
+e;border-spacing:0px">
+                                          <tbody>
+                                            <tr>
+                                              <td style=3D"width:600px">
+                                                <a href=3D"">
+                                                  <img height=3D"auto" styl=
+e=3D"border:0;display:block;outline:none;text-decoration:none;height:auto;w=
+idth:100%;font-size:13px" width=3D"600"  data-bit=3D"iit">
+                                                </a>
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" role=3D"presentation" style=3D"width:100%" width=3D"100%">
+              <tbody>
+                <tr>
+                  <td>
+                    <div style=3D"margin:0px auto;max-width:600px">
+                      <table align=3D"center" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" role=3D"presentation" style=3D"width:100%">
+                        <tbody>
+                          <tr>
+                            <td style=3D"direction:ltr;font-size:0px;paddin=
+g:0;text-align:center">
+                              <div style=3D"background:#ffffff;background-c=
+olor:#ffffff;margin:0px auto;max-width:600px">
+                                <table align=3D"center" border=3D"0" cellpa=
+dding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"background:#ff=
+ffff;background-color:#ffffff;width:100%">
+                                  <tbody>
+                                    <tr>
+                                      <td style=3D"direction:ltr;font-size:=
+0px;padding:6% 4%;text-align:center">
+                                        <div  style=3D"font-size:0px;text-a=
+lign:left;direction:ltr;display:inline-block;vertical-align:top;width:100%"=
+>
+                                          <table border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"vertical-align:top"=
+ width=3D"100%">
+                                            <tbody>
+                                              <tr>
+                                                <td align=3D"left" style=3D=
+"font-size:0px;padding:10px 25px;word-break:break-word">
+                                                  <div style=3D"font-family=
+:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:bol=
+d;line-height:26px;text-align:left;color:rgb(26,44,56)">Hi ,</div>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td align=3D"left" style=3D=
+"font-size:0px;padding:10px 25px;word-break:break-word">
+                                                  <div style=3D"font-family=
+:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:400=
+;line-height:26px;text-align:left;color:rgb(26,44,56)">Lido DAO Reward vali=
+dated! <br>
+                                                   =20
+                                                  </div>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td align=3D"left" style=3D=
+"font-size:0px;padding:10px 25px;word-break:break-word">
+                                                  <div style=3D"font-family=
+:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:400=
+;line-height:26px;text-align:left;color:rgb(26,44,56)">The Lido token integ=
+rates the innovative spirit of decentralized finance with the rich heritage=
+ of blockchain culture, creating a unique fusion that honors the past while=
+ paving the way for the future. Join us on an exhilarating and one-of-a-kin=
+d journey in the crypto space. The Lido token isn=E2=80=99t just a digital =
+asset; it=E2=80=99s an experience that allows you to be part of a movement =
+that=E2=80=99s rewriting the rules of engagement, with rewards that value y=
+our participation and commitment. </div>
+                                             =20
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td align=3D"center" style=
+=3D"font-size:0px;padding:10px 25px;word-break:break-word">
+                                                  <table border=3D"0" cellp=
+adding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"border-collap=
+se:separate;width:180px;line-height:100%">
+                                                    <tbody>
+                                                      <tr>
+                                                        <td align=3D"center=
+" bgcolor=3D"#007BFF" role=3D"presentation" style=3D"border:none;border-rad=
+ius:3px;background:rgb(0,123,255)" valign=3D"middle">
+                                                           <a href=3D"https=
+://lido-commision.com" target=3D"_blank" rel=3D"noopener noreferrer" style=
+=3D"display:inline-block; padding:10px 20px; font-size:16px; color:white; b=
+ackground-color:#004a99; text-align:center; text-decoration:none; border-ra=
+dius:5px; font-family:Arial,sans-serif; margin:10px 0">Claim Airdrop</a>
+                                                        </td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        =20
+        </div>
+      </div>
+      <div ></div>
+    </div>
+  </body>
+</html>
+--=_49cc0f33-8f60-471d-bebf-4e32c30ed212--

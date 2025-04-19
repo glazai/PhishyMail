@@ -1,0 +1,157 @@
+Delivered-To: jojolazai@gmail.com
+Received: by 2002:a05:6a11:3ec5:b0:541:17ab:9fe0 with SMTP id bv5csp2097247pxc;
+        Sun, 7 Apr 2024 14:08:09 -0700 (PDT)
+X-Received: by 2002:a0d:d6c8:0:b0:615:1386:a1ba with SMTP id y191-20020a0dd6c8000000b006151386a1bamr6402481ywd.3.1712524088985;
+        Sun, 07 Apr 2024 14:08:08 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1712524088; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Qpt1mM9FQFpjuXy5p4IGcutL3Cg2FbhiEIRlDSG0d1gH6JvHYaCPcpwhOPHvAHRwDH
+         M/kFrtdiWhFju2eBduHnQvobVz7p+W6nhCm5Q+/EEZLKVVZ8cvTYUAbGuZlKQOgmftru
+         dGH5LC9ECx9bacHQ40YoaE+SW/hoidQTOLuZBszNmxHkzFBF68JKqrgdr2bFX3kaoscD
+         5CQC8lS0LEhRa90hCFlYVzszt0rfOQCtVgu/MGL9rgT3Yl5uA5v7Y8mCkJ06x3p94FoR
+         hwMY3tU91M1ZRU1TfgZkJd09kxAj4mZzANcUNLp/fe937hmV7FhphPwsQ0U8gCSyS99H
+         IH0Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=cc:to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=OglJ5tlJK0F2A7pD15uMdva0kCFCvuv+Ryy30S6JReM=;
+        fh=AJYpsoY05qxkDVrkof6F2igbkUb4S1mrnaor2oZObU4=;
+        b=mwSx27B7xqpuiBrRCT7l2U8481yeA4YJhKB9zX1C/XOGqxO5+IbGsLIt+B8OZRdBi7
+         T8TBBAWI4TJqzasA0aT6yrrBnEHDpxCYCSlBIPbT3z5sd/EaMDmdjinjIY3767kw/CdT
+         z4UFnAhbgN+Nb13VOX5WoQ4rDCn4X2R7YqaP0RsjdMN7xdbFQ79XpUAR3GSyiKTjbJPp
+         IrLmI6492sakv6AQNWUWgeKDUJI5wjZ3MyjVC8voSxJDkTViGfAi56DKQMUpnVHumLsZ
+         YtRNWprrHqYqSNUnBFMF+JxUhyT5TZTgDZwN0gCXUYcH+kqXgCT/NcdB+DSPzO5l4db8
+         J/Sg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b="mPxlcS/H";
+       spf=pass (google.com: domain of johnsontgl97bn@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=johnsontgl97bn@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <johnsontgl97bn@gmail.com>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id i20-20020a0ddf14000000b006152af6aff9sor3461022ywe.11.2024.04.07.14.08.08
+        (Google Transport Security);
+        Sun, 07 Apr 2024 14:08:08 -0700 (PDT)
+Received-SPF: pass (google.com: domain of johnsontgl97bn@gmail.com designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b="mPxlcS/H";
+       spf=pass (google.com: domain of johnsontgl97bn@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=johnsontgl97bn@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1712524088; x=1713128888; dara=google.com;
+        h=cc:to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=OglJ5tlJK0F2A7pD15uMdva0kCFCvuv+Ryy30S6JReM=;
+        b=mPxlcS/Hq+62CZQLTMnFin6cbm8o/iQ6fMS/plZajGrc463v31RFKR5j+g+iisCTdo
+         FZKq/+iQ7fpNP4oCwM5cIjVl8s9OqYQaFPRdXawbngvs5vrOSwNla3KZwf7XONN9oXrZ
+         /E9NlQ4cQA5eVLvw1TBubkvcLQoD/INd3HbmM/ogbQ9/MZzEhYWKuZlDUeJHhSdJLV3u
+         lhgmeq9icOqZhooX/l+XezhSm/ZJJkrzA1GLipoJ0uN5iCW80tpefDPsmXVULCrCpxJd
+         dGefcaUyTKBA+jSye+CE5s/+eE5NGD7xfUkMFvc+1r0/HOOYCWpDyvwMRgCN3OCWpF45
+         pQxQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1712524088; x=1713128888;
+        h=cc:to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=OglJ5tlJK0F2A7pD15uMdva0kCFCvuv+Ryy30S6JReM=;
+        b=txlTkF8kRt9Ol91xB1KY1Zpdj2HnYux0WAjjK+976jukNVZcnnXcvXnit8j7i2FqoV
+         KfRXm5QUDoXGYhDskKZ1pNlLKjl9l6yVOr/DYaScGBK0PY1Wuz7h5svmGFEn//no9Bfu
+         5/nFFVWvk9sLyALw2IKm6jeqi3LhWA9n+978RznEthv2owG7oTPQoiXSOAgfbiNkvGpF
+         lAX0+a946xASLShDusqs4KVvFC6hnqHkKrLFp91av0VdEnjjzzBpEoGBoEhCXiW0g+RG
+         k7Dy6LKslAQbDoDfKZ+SWv2qCrQw1RMXsBDhkjS9zPjdk9w32vbfim7lJ3fGWMlVM1yD
+         yZxA==
+X-Forwarded-Encrypted: i=1; AJvYcCWT0kSCPeKQZRNvJiKqUCXIHtxwvDdIO3nwJJlZEMfejTWTbHV8I/uVEThgZZA+VPgB5VrvI81mDICxwAI9/pgBlxIAfHe2nR7rcmsrZq1KgVdRKcdVKIydw/iRkLnuTwHEqDha
+X-Gm-Message-State: AOJu0YwLzyf2jN+euChs11nbGggWj9HoGcLNY8McNxiR/33jPshpJP6y
+	aWg0Ppnel/if1P/XERS4OM37x6j6wHksimOzLpNIIB6eI6gl2OVNMOHOnlQLmin3vUR6Fn2ZPNO
+	HBM1MTFWG05C8LfYBuF0Ma0U+BaT5PEi+drjfnydoTXI=
+X-Google-Smtp-Source: AGHT+IGwd5UXtBxKR0cAFThe3ZQIYPYDScS/tGO68srlCRo6C9MNE6fFIgj+g0sLiqh211VPWN2JHbIh7r2DmX8C3RY=
+X-Received: by 2002:a05:690c:2913:b0:617:d4a0:fa8f with SMTP id
+ eg19-20020a05690c291300b00617d4a0fa8fmr5672511ywb.51.1712524087965; Sun, 07
+ Apr 2024 14:08:07 -0700 (PDT)
+MIME-Version: 1.0
+From: Linda <johnsontgl97bn@gmail.com>
+Date: Mon, 8 Apr 2024 00:07:56 +0300
+Message-ID: <CAMP5efOdnaZYsAx4mo5M1d=9q+VubMZ=uXooQtVWjvuHE-W-Gg@mail.gmail.com>
+Subject: Prepare for Arrival: Coins En Route to Your Office
+To: jojolazai@gmail.com
+Cc: adeje67@gmail.com, suleymanyildirimkuzeyli@gmail.com, ruswgal@gmail.com
+Content-Type: multipart/mixed; boundary="000000000000ef0a22061588159b"
+
+--000000000000ef0a22061588159b
+Content-Type: multipart/alternative; boundary="000000000000ef0a210615881599"
+
+--000000000000ef0a210615881599
+Content-Type: text/plain; charset="UTF-8"
+
+* Hello, We hope this message finds you well. We wanted to inform you that
+weve ensured you were reimbursed for the damage caused by the unfortunate
+incident. Our team worked diligently to process your claim and make sure
+you were fairly compensated for any losses incurred. Your satisfaction and
+peace of mind are always our top priorities, and we strive to handle such
+situations with efficiency and care.We understand how disruptive and
+stressful damage can be, and we are glad we could assist you in resolving
+this matter promptly. If there is anything else we can do to further
+support you, please do not hesitate to reach out to us. Your feedback and
+experience are valuable to us, and we are here to help in any way we
+can.Thank you for your understanding and patience throughout this process.
+We appreciate your cooperation and look forward to continuing to serve you
+in the future. Did you receive the reimbursement in full? Is there anything
+else you need assistance with at this time?Weve ensured you were reimbursed
+for the damage.Warm regards,*
+
+--000000000000ef0a210615881599
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<p target=3D"41YOD-218-43-3-885" multiple size=3D"0YCJ-05-0-73-5-770-850-1-=
+13" ismap enctype=3D"1OZKV-76-54-64"><div itemprop=3D"38RVT-17-45-17-50-22-=
+26-107-2" content=3D"31WBO-60-5-13-758-45" charset=3D"14L-56-001-85-2-7-1" =
+title=3D"2RET-271-72-30-8-6-346"><div rel=3D"1KEPT-082-80-703-46-33"><div t=
+arget=3D"68YG-2-11-3-1-18-456-86-55" accesskey=3D"73YL-007-151-75-101" rel=
+=3D"7HQ-4-8-84-5-03-2-65-54" scope=3D"56JDYH-52-5-04-147-7"><body action=3D=
+"06K-46-740-8-040-85" type=3D"7UCUL-2-2-6-44-68"><b start=3D"1Q-01-033-305-=
+6-8-735-8-7-6-14-6" type=3D"8NZCJ-507-86-31-081-10-3-230-3-5-6" datetime=3D=
+"5RIZ-354-2-5-4-24-424" shape=3D"35KIX-080-75-5-305-3-2-024"><blockquote sp=
+an=3D"5R-022-52-4-6-7-835-463-60-584" target=3D"02KX-27-2-6" disabled><font=
+ border=3D"2HVTP-70-6-6" dir=3D"41BUVS-841-47-01-360-7-7"><font multiple va=
+lue=3D"7GIL-04-8-360-5-653-36-5-83-3"><body datetime=3D"80ZRLY-7-30-032-552=
+-8-208-58-534-6-68-1" data=3D"50CX-6-1-5-8-11-207-3-470" accesskey=3D"6ROY-=
+138-177-76-57-156-6" target=3D"5PBFB-130-074-42-5-66-74-525-73-35-3-020">  =
+ Hello, <br>We hope this message finds you well. We wanted to inform you th=
+at weve ensured you were reimbursed for the damage caused by the unfortunat=
+e incident. Our team worked diligently to process your claim and make sure =
+you were fairly compensated for any losses incurred. Your satisfaction and =
+peace of mind are always our top priorities, and we strive to handle such s=
+ituations with efficiency and care.<br>We understand how disruptive and str=
+essful damage can be, and we are glad we could assist you in resolving this=
+ matter promptly. If there is anything else we can do to further support yo=
+u, please do not hesitate to reach out to us. Your feedback and experience =
+are valuable to us, and we are here to help in any way we can.<br>Thank you=
+ for your understanding and patience throughout this process. We appreciate=
+ your cooperation and look forward to continuing to serve you in the future=
+. <br>Did you receive the reimbursement in full? Is there anything else you=
+ need assistance with at this time?<br>Weve ensured you were reimbursed for=
+ the damage.<br>Warm regards,</body></font></font></blockquote></b></body><=
+/div></div></div></p>
+
+--000000000000ef0a210615881599--
+--000000000000ef0a22061588159b
+Content-Type: application/octet-stream; name="GET MONEY 8.ics"
+Content-Disposition: attachment; filename="GET MONEY 8.ics"
+Content-Transfer-Encoding: base64
+Content-ID: <h_jeo6lbz21>
+X-Attachment-Id: h_jeo6lbz21
+
+QkVHSU46VkNBTEVOREFSDQpQUk9ESUQ6LS8vR29vZ2xlIEluYy8vR29vZ2xlIENhbGVuZGFyIDcw
+LjkwNTQvL0VODQpWRVJTSU9OOjIuMA0KQ0FMU0NBTEU6R1JFR09SSUFODQpNRVRIT0Q6UFVCTElT
+SA0KQkVHSU46VkVWRU5UDQpEVFNUQVJUO1ZBTFVFPURBVEU6MjAyNDAzMjENCkRURU5EO1ZBTFVF
+PURBVEU6MjAyNDA0MTYNCkRUU1RBTVA6MjAyNDAzMjFUMTg0NjQwWg0KT1JHQU5JWkVSO0NOPWxj
+bzY2MTIxNjNAdWNsZmZ4cy5jb206bWFpbHRvOmxjbzY2MTIxNjNAdWNsZmZ4cy5jb20NCkFUVEVO
+REVFO1JTVlA9VFJVRTtDTj1sY282NjEyMTYzQHVjbGZmeHMuY29tO1gtTlVNLUdVRVNUUz0wOm1h
+aWx0bzpsY282NjEyMTYzQHVjbGZmeHMuY29tDQpDUkVBVEVEOjIwMjQwMzIxVDE4NDY0MFoNCkRF
+U0NSSVBUSU9OOk9wZW4gLSBodHRwczovL2RvY3MuZ29vZ2xlLmNvbS9kcmF3aW5ncy9kLzFoVHFl
+X2QNCiA4bUFKcWpUX0hLQmZMQ1dmSUk1Y3VpTUgybTJNbGhfRFl2QmdnL3ByZXZpZXc/ODU0NA0K
+IDANCkxBU1QtTU9ESUZJRUQ6MjAyNDAzMjFUMTg0NjQwWg0KTE9DQVRJT046DQpVUkw6aHR0cHM6
+Ly9kb2NzLmdvb2dsZS5jb20vZHJhd2luZ3MvZC8xaFRxZV9kOG1BSnFqVF9IS0JmTENXZklJNWN1
+aU1IMm0yTWxoX0RZdkJnZy9wcmV2aWV3Pzg4MTMyDQpTRVFVRU5DRTowDQpTVEFUVVM6Q09ORklS
+TUVEDQpTVU1NQVJZOmh5cGVydGV4dCBvciBmb3JtIGhvd2V2ZXIgUHJvY2Vzc2luZw0KVFJBTlNQ
+OlRSQU5TUEFSRU5UDQpFTkQ6VkVWRU5UDQpFTkQ6VkNBTEVOREFSDQo=
+--000000000000ef0a22061588159b--

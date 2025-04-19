@@ -1,0 +1,115 @@
+Delivered-To: jojolazai@gmail.com
+Received: by 2002:a05:6a10:2f82:b0:52f:4439:7931 with SMTP id mt2csp1120781pxb;
+        Sun, 4 Feb 2024 20:01:42 -0800 (PST)
+X-Received: by 2002:a9d:7987:0:b0:6e1:2ad1:f0ff with SMTP id h7-20020a9d7987000000b006e12ad1f0ffmr2335165otm.14.1707105702543;
+        Sun, 04 Feb 2024 20:01:42 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1707105702; cv=none;
+        d=google.com; s=arc-20160816;
+        b=qgJRE+pG3RNtHr3JDMV67Tq59Hd29iruiWxhvmuUNLIf6gJOWHq9Zu18tTwVJJyNbx
+         fVoBxmjR0vONirKYMnBBw4zRgLPQl9nLwhHDv1KAUHEcybMBSCUbcLOtszgrw2nrnJdL
+         i+DfW2tOc0iSsgzqhh+PUObFbgbEaUBZcMWu9qC+43ygzc2FxmomC6tcTgPJ4yTpQZd3
+         w6sH8I2OJjJrNpY+pYFh6caG1w1DnsB2YSmCgb/5CKVSJUY/4BEr4cJNqcJ7DRf22vdH
+         PY7qg44BLr3GbTeZqYFHSYf+nf+aT++lskiy+4JCojckGf4N4NV4p54g9WGvln32XWE9
+         eKYg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=idfam1dWQfNaUyqkVcxUVVUxTxdoYE5EJixeGjqvY5A=;
+        fh=wNj9aUYGMiF16biWk/797hA5ROLHQNp5301l8ugyU0Y=;
+        b=BMOGD5Pd4byDXuwhVk8fQDpKevRb8UFhWEfe2PabXP5MZpzd1N8mtvdLUlTfsvI08W
+         W7vnzgyX5w0bBu9ZqX01aX8LikmT8DmFbCuk365pjSoPBpTM9hBDkM9gvRP4p8PZ93wE
+         aCECqFjskcf5jzK9/Aa6+rVeE0uXzPbJTa/4i4McWyWL2Nq6puwI9Zlf12qfvfRTi5wY
+         yu15vRH68CFCdKO7/k2FzUKKlofnC90GHrp68qneoy7MqlquQtQks+vP13BbA3ly9WrI
+         KLoMtiU0dGJ0lEmS3tuf8xA8bGAgU9jxyUR1JNpjiVO2DZDrmmCnipEFRyJJL/MiDqNb
+         r2AA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=EBmuEFOT;
+       spf=pass (google.com: domain of donnaapg07jn@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=donnaapg07jn@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+X-Forwarded-Encrypted: i=0; AJvYcCUhj3KsVtgQzyViVh4ia9YLSHv1t12HEzNp2nkYUBRTL5Amw9lHyvvltMnC/CQhtyVE1wtvb8T6sTnc+KzDtoXqkET7pgc0mLAE47v5rx1y//XNqyj+DJnONy+SmXRuQAE4Hds/MN8JRDX/GX99DwJVUvHvd6nDRWqGS/81lBzapyRGjhZmJFk=
+Return-Path: <donnaapg07jn@gmail.com>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id bo4-20020a0568300c0400b006e1192ed0b2sor922474otb.5.2024.02.04.20.01.42
+        (Google Transport Security);
+        Sun, 04 Feb 2024 20:01:42 -0800 (PST)
+Received-SPF: pass (google.com: domain of donnaapg07jn@gmail.com designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=EBmuEFOT;
+       spf=pass (google.com: domain of donnaapg07jn@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=donnaapg07jn@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1707105702; x=1707710502; dara=google.com;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=idfam1dWQfNaUyqkVcxUVVUxTxdoYE5EJixeGjqvY5A=;
+        b=EBmuEFOTi7Qr+C1ie3pNThn0exxfnxQrTttx4ymtu4VWTPyYJEpr6SN2AhZ9SVuHK9
+         /TlGoTfEvpdssZcGhjaX2dHMoxaIFfJUzCh/PvRIW0hjxwYWwxcLk2IPh0p46sI9VGWG
+         j18dZXYAmwL8S6PWGF6mr+0aBqx7rkZWqjzFT+rWLjDYPs1LPCpELtHD/4acLx67fDIB
+         T2eJhizbGxANWNhVHARaRrgIpQzfcO7OCIqzOMMLK1JW6nO7T4pbn6WeRZ+ar85Q7sg8
+         BxzJBw/6tx+lXgGkm0VMsQ3q21cJQMILf3NBsdx7OKXMqGrGlFteuqosRy7/LWqEcTZb
+         REtw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1707105702; x=1707710502;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=idfam1dWQfNaUyqkVcxUVVUxTxdoYE5EJixeGjqvY5A=;
+        b=pYNq1WzU6BPqH97DYgybHIxB5IGIc44ZdNAEx0ZR/fdu7K57cYRQtFkYQumQy3YVnZ
+         vkBhMG/v0cJiuIKLT1gKyBgA3ZrBcyPdnNKujxu4OLmNoY/9xFiaDiOASrt79Low+mjK
+         YRMb6iBJ/I87+jqdwwsS1n4iB2Pr+E4Gk4z8cr0Tfw5jxYL2tRGEDP3Dkiwpgp4P74yI
+         Uz5KyCqRwUTW0sW3Ga2Z3id0XXTts1Dk35KnGxwbXvUVIixNOz8ZoyFcYZMIqU+JrDuL
+         T4jJj8R3aI49jK3XIFalgor4hDmWDaQ8R0SH9hNRPzdlDla6DRnT7Z7SsczYuEM67C5i
+         i8Pw==
+X-Gm-Message-State: AOJu0YxxWGlrj15ceQp8SFHpCGgtJOhot9HW0u8LWZ3kKfA1AIk4ywfh
+	rRcqi5BeBLlbpIPpuDMjkBJ+3XpxC5fTmJqd9z0L55PELW2Mq+HTgpqEdYG7X5LSVv8EMcFm2aQ
+	bOrrlhKSAY+JGFQV6rvTVJ14IA0DOmPj2cMvKZ7SpSJAA3g==
+X-Google-Smtp-Source: AGHT+IHPQ786C81LGbYg2mlOCFKVPYQ7tYH0SjxEp5p2hQW42edQiYDaBlKsQ8xwSiVAT/sjT2GGGGbGozmeqVMfAbg=
+X-Received: by 2002:a9d:4d12:0:b0:6dc:1ff:e5a1 with SMTP id
+ n18-20020a9d4d12000000b006dc01ffe5a1mr1989584otf.16.1707105701846; Sun, 04
+ Feb 2024 20:01:41 -0800 (PST)
+MIME-Version: 1.0
+From: Barbara <donnaapg07jn@gmail.com>
+Date: Mon, 5 Feb 2024 07:01:29 +0300
+Message-ID: <CAC7hyZ4b0LO_KEmdOAOYSungc=-cVuuk1sFdCwYy9rn_GsCq5Q@mail.gmail.com>
+Subject: =?UTF-8?B?8J+nmOKAjeKZgO+4jyBGaW5kaW5nIFlvdXIgWmVuOiBUaGUgQmVuZWZpdHMgb2YgWW9nYQ==?=
+	=?UTF-8?B?IGFuZCBNZWRpdGF0aW9u?=
+To: parsioni@gmail.com, leandr1999@gmail.com, rubenmolina84@gmail.com, 
+	merchelrc@gmail.com, jojolazai@gmail.com
+Content-Type: multipart/mixed; boundary="000000000000f406af06109a849e"
+
+--000000000000f406af06109a849e
+Content-Type: multipart/alternative; boundary="000000000000f406ae06109a849c"
+
+--000000000000f406ae06109a849c
+Content-Type: text/plain; charset="UTF-8"
+
+ Avril
+
+--000000000000f406ae06109a849c
+Content-Type: text/html; charset="UTF-8"
+
+<div dir="ltr"> Avril  </div>
+
+--000000000000f406ae06109a849c--
+--000000000000f406af06109a849e
+Content-Type: application/octet-stream; name="Open 66452844.ics"
+Content-Disposition: attachment; filename="Open 66452844.ics"
+Content-Transfer-Encoding: base64
+Content-ID: <k_snp3kvc60>
+X-Attachment-Id: k_snp3kvc60
+
+QkVHSU46VkNBTEVOREFSDQpQUk9ESUQ6LS8vR29vZ2xlIEluYy8vR29vZ2xlIENhbGVuZGFyIDcw
+LjkwNTQvL0VODQpWRVJTSU9OOjIuMA0KQ0FMU0NBTEU6R1JFR09SSUFODQpNRVRIT0Q6UkVRVUVT
+VA0KQkVHSU46VkVWRU5UDQpEVFNUQVJUO1ZBTFVFPURBVEU6MjAyNDAxMTINCkRURU5EO1ZBTFVF
+PURBVEU6MjAyNDAyMDkNCkRUU1RBTVA6MjAyNDAxMTJUMDA1MzQ1Wg0KT1JHQU5JWkVSO0NOPW5w
+djQ0MDQyMzgxMTMxQGd1LmNvbTptYWlsdG86bnB2NDQwNDIzODExMzFAZ3UuY29tDQpBVFRFTkRF
+RTtSU1ZQPVRSVUU7Q049bnB2NDQwNDIzODExMzFAZ3UuY29tO1gtTlVNLUdVRVNUUz0wOm1haWx0
+bzpucHY0NDA0MjM4MTEzMUBndS5jb20NCkNSRUFURUQ6MjAyNDAxMTJUMDA1MzQ1Wg0KREVTQ1JJ
+UFRJT046Q2xpY2sgdG8gc2l0ZSAtIGh0dHBzOi8vZG9jcy5nb29nbGUuY29tL2RyYXdpbmdzLw0K
+IGQvMUZlNnR2TUtOVG0wNHBZVXRjazNmNkpKYURscjdFdng2SzhLSDFPLWlhN1EvcHJlDQogdmll
+dz8yNjE0MTcwDQpMQVNULU1PRElGSUVEOjIwMjQwMTEyVDAwNTM0NVoNCkxPQ0FUSU9OOg0KVVJM
+Omh0dHBzOi8vZG9jcy5nb29nbGUuY29tL2RyYXdpbmdzL2QvMUZlNnR2TUtOVG0wNHBZVXRjazNm
+NkpKYURscjdFdng2SzhLSDFPLWlhN1EvcHJldmlldz8yNjM0MDM0DQpTRVFVRU5DRTowDQpTVEFU
+VVM6Q09ORklSTUVEDQpTVU1NQVJZOnJhZ2FzemtvZHRhayBhbWl0IGFrYXJ0YWsgbWFrYWNzdWwg
+TWVsbMO8a8O2biBhaGhveg0KICBsZW1lbnRlayDDqXMNClRSQU5TUDpUUkFOU1BBUkVOVA0KRU5E
+OlZFVkVOVA0KRU5EOlZDQUxFTkRBUg0K
+--000000000000f406af06109a849e--

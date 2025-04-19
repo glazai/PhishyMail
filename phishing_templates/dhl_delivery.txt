@@ -1,0 +1,3 @@
+dhl.*(tracking|delivery)
+your.*package.*(has been|is).*delayed
+track.*your.*shipment

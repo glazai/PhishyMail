@@ -1,0 +1,3 @@
+(crypto|bitcoin|ethereum).*giveaway
+claim.*your.*token
+airdrop.*has.*been.*initiated
