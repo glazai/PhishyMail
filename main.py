@@ -23,10 +23,8 @@ def calculate_risk(indicators, attachment_score, auth_results):
         if isinstance(val, list) and val:
             score += weights.get(key, 0)
 
-    # Add attachment score
     score += attachment_score
 
-    # Add score for DKIM/SPF failures
     if auth_results.get("spf") == "fail" or auth_results.get("dkim") == "fail":
         score += 2
 
