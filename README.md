@@ -29,7 +29,7 @@ Each `.eml` file gets scanned and scored, with a summary showing potential risks
 Clone the repo:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/PhishyMail.git
+git clone https://github.com/glazai/PhishyMail.git
 cd PhishyMail
 ```
 
